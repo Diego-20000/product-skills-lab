@@ -91,7 +91,7 @@ error de cada componente, reglas de negocio. Todo eso ya se cubrió más
 barato en los niveles anteriores; repetirlo en E2E multiplica el tiempo de
 CI sin agregar información.
 
-Ver el skill [`stable-e2e-selectors`](../../../automation/browser-testing/skills/stable-e2e-selectors/SKILL.md).
+Ver el skill [`stable-e2e-selectors`](../../../../automation/browser-testing/skills/stable-e2e-selectors/SKILL.md).
 
 ## Cómo decidir en la práctica, caso por caso
 

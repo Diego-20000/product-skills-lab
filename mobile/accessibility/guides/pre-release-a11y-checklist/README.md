@@ -112,7 +112,7 @@ lo que la mayoría de los equipos supone.
 
 ## Fuentes
 
-Como documenta [`SOURCES.md`](../../../_meta/SOURCES.md), **este pilar no
+Como documenta [`SOURCES.md`](../../../../_meta/SOURCES.md), **este pilar no
 tiene proyectos de referencia por encima de 10k estrellas**. Las fuentes
 reales son:
 

@@ -32,7 +32,7 @@ propia que alguien diseñó. Reimplementar a mano una animación de marca en
 CSS es lento, sale distinto, y hay que rehacerlo cada vez que el diseño
 cambia.
 
-Ver la guía [`css-waapi-or-library`](../../../web/animation/guides/css-waapi-or-library/README.md).
+Ver la guía [`css-waapi-or-library`](../../../../web/animation/guides/css-waapi-or-library/README.md).
 
 ## Lottie
 
@@ -78,7 +78,7 @@ incorporada. En Lottie habría que orquestar segmentos desde el código; en
 Rive el estado es parte del archivo.
 
 **Qué cuesta:** ecosistema mucho más chico. Como registra
-[`SOURCES.md`](../../../_meta/SOURCES.md), su runtime está dos órdenes de
+[`SOURCES.md`](../../../../_meta/SOURCES.md), su runtime está dos órdenes de
 magnitud por debajo de Lottie en adopción, lo que significa menos ejemplos,
 menos gente que lo conozca y más riesgo de dependencia. Además su editor es
 propio, así que quien diseña tiene que aprenderlo.
@@ -101,7 +101,7 @@ propio, así que quien diseña tiene que aprenderlo.
 el tipo de movimiento que causa malestar a personas sensibles. Con
 cualquiera de los cuatro formatos hay que consultar la preferencia y ofrecer
 una versión estática — ver el snippet
-[`respect-reduced-motion`](../../../web/animation/snippets/respect-reduced-motion/README.md).
+[`respect-reduced-motion`](../../../../web/animation/snippets/respect-reduced-motion/README.md).
 
 **Carga diferida.** Ninguna animación decorativa debería descargarse (ni su
 runtime) antes de estar por entrar en pantalla.

@@ -120,7 +120,7 @@ y el snippet [`theme-switch-with-tokens`](../../snippets/theme-switch-with-token
 
 ## Fuentes
 
-- **Style Dictionary** (4.8k ⭐): el estándar de facto del sector pese a su cifra modesta. Como registra [`SOURCES.md`](../../../_meta/SOURCES.md), **esta categoría no tiene ninguna herramienta por encima de 10k estrellas** — lo cual es en sí mismo un dato: el problema se resuelve mayormente con configuración propia, no con una librería masiva.
+- **Style Dictionary** (4.8k ⭐): el estándar de facto del sector pese a su cifra modesta. Como registra [`SOURCES.md`](../../../../_meta/SOURCES.md), **esta categoría no tiene ninguna herramienta por encima de 10k estrellas** — lo cual es en sí mismo un dato: el problema se resuelve mayormente con configuración propia, no con una librería masiva.
 - **semi-design** (10.2k ⭐): más de 3000 tokens definidos; útil como referencia de hasta dónde llega la granularidad en un sistema grande, y como advertencia de cuánto es demasiado.
 - **Tailwind CSS** (96.1k ⭐): su configuración cumple el mismo rol para web; verlo ayuda a decidir cuándo Style Dictionary agrega valor real (hay mobile) y cuándo duplica lo que Tailwind ya hace.
 - **awesome-design-md** (105k ⭐): el mismo problema atacado desde otro ángulo — describir el sistema en prosa para que una IA lo aplique, en vez de generar constantes para un compilador. Señal de que la "fuente única de verdad" del diseño puede tomar más de una forma.

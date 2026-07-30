@@ -125,7 +125,7 @@ dependencia comprometida.
 
 - **Poner E2E en la etapa 1** "para detectar antes": produce el efecto contrario, porque cualquier error de lint cuesta 30 minutos.
 - **Un solo job monolítico** que hace todo en secuencia: no se puede paralelizar, ni reintentar solo la parte que falló, ni saber qué tardó.
-- **Tests intermitentes tapados con reintentos**: el pipeline queda verde y deja de significar algo. Ver el skill [`stable-e2e-selectors`](../../../automation/browser-testing/skills/stable-e2e-selectors/SKILL.md).
+- **Tests intermitentes tapados con reintentos**: el pipeline queda verde y deja de significar algo. Ver el skill [`stable-e2e-selectors`](../../../../automation/browser-testing/skills/stable-e2e-selectors/SKILL.md).
 - **Verificaciones que nadie mira**: si un job falla siempre y todos lo ignoran, hay que arreglarlo o sacarlo. Un check permanentemente rojo entrena al equipo a ignorar el rojo.
 - **Secretos como variables de entorno en el workflow**: van en el gestor de secretos de la plataforma, y no deben quedar accesibles a jobs de PRs de forks.
 - **No medir la duración**: sin datos de cuánto tarda cada etapa, la optimización es a ciegas.
