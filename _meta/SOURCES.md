@@ -17,13 +17,13 @@ Cada pilar tiene dos secciones:
 - **Otros repos verificados** — tabla de amplitud, para saber qué más existe
   y por qué es distinto, sin el desarrollo largo.
 
-**Sobre las estrellas:** todas las cifras marcadas ✅ fueron verificadas
-directamente en las páginas de GitHub Topics (julio 2026). Las marcadas ⚠️
-vienen de fuentes secundarias y pueden estar desactualizadas. Las cifras de
-blogs y resúmenes de IA demostraron ser poco confiables: en una revisión
-previa de este archivo, GSAP figuraba con 66.5k cuando su cifra real es
-27.2k, y Tailwind con 35k cuando tiene 96.1k. Ante la duda, se verifica
-contra GitHub, nunca contra un artículo.
+**Sobre las estrellas:** todas las cifras de este catálogo están marcadas ✅,
+lo que significa que fueron verificadas directamente contra GitHub (páginas
+de Topics o del propio repo) en julio de 2026 — no queda ninguna cifra sin
+verificar. Las cifras de blogs y resúmenes de IA demostraron ser poco
+confiables: en una revisión previa de este archivo, GSAP figuraba con 66.5k
+cuando su cifra real es 27.2k, y Tailwind con 35k cuando tiene 96.1k. Ante
+la duda, se verifica contra GitHub, nunca contra un artículo.
 
 La vara general para entrar acá es **10k estrellas**. Se admiten excepciones
 por debajo cuando el proyecto es el estándar de facto indiscutido de un
@@ -160,7 +160,7 @@ y después recorre el árbol resultante eliminando todo lo que no esté en una
 allowlist. Es la referencia obligada cuando hay que renderizar HTML que
 viene de un usuario.
 
-**[helmet](https://github.com/helmetjs/helmet)** — ~10.7k ⭐ ⚠️
+**[helmet](https://github.com/helmetjs/helmet)** — 10.7k ⭐ ✅
 Middleware de Express que setea de una vez una colección de headers HTTP de
 seguridad (CSP, HSTS, X-Frame-Options), cada uno configurable
 individualmente. Solo endurece la superficie a nivel de headers — no
@@ -178,7 +178,7 @@ previene fallas de lógica de negocio ni de validación.
 | [passport](https://github.com/jaredhanson/passport) | 23.5k ✅ | El clásico middleware de auth de Node; modelo de "estrategias" intercambiables por proveedor |
 | [casbin](https://github.com/apache/casbin) | 20.3k ✅ | Autorización (no autenticación): implementa ACL/RBAC/ABAC de forma declarativa por política |
 | [supertokens](https://github.com/supertokens/supertokens-core) | 15.2k ✅ | Alternativa open-source y self-hosteable a Auth0/Cognito |
-| [express-rate-limit](https://github.com/express-rate-limit/express-rate-limit) | ~3.1k ⚠️ | *Excepción bajo la vara:* la referencia directa del ecosistema Express para rate limiting, con headers estándar y stores compartidos |
+| [express-rate-limit](https://github.com/express-rate-limit/express-rate-limit) | 3.3k ✅ | *Excepción bajo la vara:* la referencia directa del ecosistema Express para rate limiting, con headers estándar y stores compartidos |
 
 ---
 
@@ -261,7 +261,7 @@ arquitectura de backend Node.
 | [fiber](https://github.com/gofiber/fiber) | 40k ✅ | Framework Go con API inspirada en Express; referencia de comparación fuera de Node |
 | [apollo-server](https://github.com/apollographql/apollo-server) | 13.9k ✅ | Servidor GraphQL de referencia, alternativa al modelo REST |
 | [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware) | 11.1k ✅ | Proxy inverso como middleware; patrón habitual para dev servers y BFF |
-| [Fastify](https://github.com/fastify/fastify) | ~36.8k ⚠️ | Schema-first: el JSON Schema que valida también acelera la serialización; plugins con encapsulamiento real |
+| [Fastify](https://github.com/fastify/fastify) | 36.9k ✅ | Schema-first: el JSON Schema que valida también acelera la serialización; plugins con encapsulamiento real |
 
 ---
 
@@ -336,7 +336,7 @@ vuelva inmantenible.
 | [goreplay](https://github.com/probelabs/goreplay) | 19.3k ✅ | Captura tráfico HTTP real de producción y lo reproduce contra staging |
 | [hurl](https://github.com/Orange-OpenSource/hurl) | 19.1k ✅ | Tests HTTP definidos en texto plano, pensados para correr en CI |
 | [enzyme](https://github.com/enzymejs/enzyme) | 19.8k ✅ | El approach anterior a Testing Library: inspecciona el estado interno del componente (hoy desaconsejado, útil como contraste) |
-| [Vitest](https://github.com/vitest-dev/vitest) | ~14k ⚠️ | Reutiliza el pipeline de Vite; API compatible con Jest para migración barata |
+| [Vitest](https://github.com/vitest-dev/vitest) | 16.9k ✅ | Reutiliza el pipeline de Vite; API compatible con Jest para migración barata |
 
 ---
 
@@ -376,7 +376,7 @@ de auditoría — su alcance real es mucho mayor que lo que sugiere el número.
 | [MathJax](https://github.com/mathjax/MathJax) | 10.9k ✅ | Renderiza matemática accesible (leíble por lector de pantalla), no como imagen |
 | [Base UI](https://github.com/mui/base-ui) | 10.5k ✅ | Primitivas sin estilo del equipo de MUI; competidor directo de Radix |
 | [ariakit](https://github.com/ariakit/ariakit) | 8.6k ✅ | Componentes accesibles con foco explícito en cumplimiento de las guías WAI-ARIA |
-| [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) | <10k ⚠️ | *Excepción:* linting estático de accesibilidad en JSX; corre en el editor, antes de ejecutar |
+| [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) | 3.6k ✅ | *Excepción bajo la vara:* linting estático de accesibilidad en JSX; corre en el editor, antes de ejecutar |
 
 ---
 
@@ -416,7 +416,7 @@ traban al scrollear", que es donde casi toda app falla primero.
 | [Material](https://github.com/CosmicMind/Material) | 12k ✅ | Material Design en iOS, para apps que quieren consistencia cross-platform |
 | [Eureka](https://github.com/xmartlabs/Eureka) | 11.8k ✅ | Construcción declarativa de formularios, un dolor clásico en iOS |
 | [AudioKit](https://github.com/AudioKit/AudioKit) | 11.4k ✅ | Síntesis y procesamiento de audio; relevante si la app cruza con `video/` |
-| [Swift (lenguaje)](https://github.com/swiftlang/swift) | ~70.2k ⚠️ | Compilador y stdlib; fuente de verdad de features recientes del lenguaje |
+| [Swift (lenguaje)](https://github.com/swiftlang/swift) | 70.2k ✅ | Compilador y stdlib; fuente de verdad de features recientes del lenguaje |
 
 ---
 
@@ -516,10 +516,15 @@ defecto (la causa número uno de flakiness en Appium). Su formato declarativo
 lo hace notablemente más legible — y, no menor para este repo, mucho más
 fácil de generar y mantener por una IA que un test imperativo.
 
-*Detox (React Native) y Espresso (Android) siguen sin confirmar por encima
-de 10k estrellas. Detox es la referencia gray-box para RN (se sincroniza con
-el hilo de JS para eliminar esperas), Espresso es la herramienta nativa de
-Google para Android.*
+**[Detox](https://github.com/wix/Detox)** — 12k ⭐ ✅
+Testing gray-box específico de React Native: en vez de esperar por tiempo o
+por aparición de elementos, se sincroniza directamente con el hilo de
+JavaScript de la app y sabe cuándo terminó de estar ocupada. Eso elimina de
+raíz la causa principal de flakiness, a costa de servir solo para RN.
+
+*Espresso (Android, de Google) vive dentro del monorepo de AndroidX y no
+tiene un repo propio con estrellas comparables — se referencia por
+documentación oficial, no por repo.*
 
 ---
 
@@ -604,7 +609,7 @@ históricamente más lento y más propenso a flakiness sin tooling adicional.
 |---|---|---|
 | [Scrapling](https://github.com/D4Vinci/Scrapling) | 71.8k ✅ | Scraping que se auto-repara ante cambios de selectores |
 | [phantomjs](https://github.com/ariya/phantomjs) | 29.5k ✅ | **Archivado.** El precursor de todo esto; relevante solo como contexto histórico |
-| [Cypress](https://github.com/cypress-io/cypress) | no confirmado ⚠️ | Corre los tests dentro del navegador real, con debugging por viaje en el tiempo |
+| [Cypress](https://github.com/cypress-io/cypress) | 50.6k ✅ | Corre los tests dentro del navegador real (no un proceso externo que lo controla), con debugging por viaje en el tiempo |
 
 ---
 
@@ -654,7 +659,7 @@ sino como la unidad de empaquetado que asumen los pipelines modernos.
 | [infracost](https://github.com/infracost/infracost) | 12.4k ✅ | Muestra el costo en dólares de un cambio de infraestructura en el PR |
 | [earthly](https://github.com/earthly/earthly) | 12k ✅ | Builds repetibles con sintaxis a mitad de camino entre Dockerfile y Makefile |
 | [crossplane](https://github.com/crossplane/crossplane) | 11.9k ✅ | Gestiona infraestructura cloud desde Kubernetes |
-| [Ansible](https://github.com/ansible/ansible) | ~65k ⚠️ | Agentless vía SSH; playbooks YAML idempotentes por diseño |
+| [Ansible](https://github.com/ansible/ansible) | 69.8k ✅ | Agentless vía SSH; playbooks YAML idempotentes por diseño |
 
 ---
 
@@ -667,7 +672,7 @@ importe — significa que se resuelve mayormente con configuración propia y
 con las herramientas que ya trae cada design system, no con una librería
 dedicada masiva.
 
-**[Style Dictionary](https://github.com/style-dictionary/style-dictionary)** — ~4k ⭐ ⚠️
+**[Style Dictionary](https://github.com/style-dictionary/style-dictionary)** — 4.8k ⭐ ✅
 *Excepción bajo la vara.* Toma una única fuente de verdad (JSON/YAML con
 colores, espaciados, tipografía) y la transforma a múltiples formatos de
 salida (variables CSS, XML de Android, Swift, JS) mediante "transforms"
@@ -799,8 +804,8 @@ y no en un navegador — cruce directo entre `video/` y `mobile/`.
 | [owncast](https://github.com/owncast/owncast) | 11.4k ✅ | Servidor de live streaming self-hosteado con chat |
 | [react-player](https://github.com/cookpete/react-player) | 10.3k ✅ | Componente React que abstrae YouTube/Vimeo/archivos tras una sola API |
 | [livego](https://github.com/gwuhaolin/livego) | 10.2k ✅ | Servidor de live streaming en Go |
-| [Plyr](https://github.com/sampotts/plyr) | ~29.9k ⚠️ | Capa de **UI** accesible y personalizable por CSS; se combina con hls.js por debajo |
-| [Shaka Player](https://github.com/shaka-project/shaka-player) | ~8.2k ⚠️ | *Excepción:* HLS **y** DASH con DRM (Widevine/PlayReady) integrado; el proyecto de referencia de Google |
+| [Plyr](https://github.com/sampotts/plyr) | 29.9k ✅ | Capa de **UI** accesible y personalizable por CSS; se combina con hls.js por debajo |
+| [Shaka Player](https://github.com/shaka-project/shaka-player) | 8.2k ✅ | *Excepción bajo la vara:* HLS **y** DASH con DRM (Widevine/PlayReady) integrado; el proyecto de referencia de Google |
 
 ---
 
