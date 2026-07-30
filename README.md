@@ -1,4 +1,4 @@
-# web-skills-lab
+# product-skills-lab
 
 Colección organizada de **skills**, **snippets** y **guías** reutilizables para
 construir productos digitales completos: sitios y apps web, apps móviles

@@ -1,7 +1,7 @@
 # Taxonomía: qué entra y qué no entra
 
 Este documento es la referencia para decidir si un recurso nuevo pertenece a
-`web-skills-lab`, y en qué carpeta. Ante la duda, se aplica primero el
+`product-skills-lab`, y en qué carpeta. Ante la duda, se aplica primero el
 **criterio general** y después las notas específicas de cada pilar.
 
 ## Criterio general
