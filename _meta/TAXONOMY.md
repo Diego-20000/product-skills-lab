@@ -9,7 +9,7 @@ Este documento es la referencia para decidir si un recurso nuevo pertenece a
 **Entra un recurso si cumple las tres condiciones:**
 1. Es **reutilizable** en más de un proyecto (no es una decisión específica de un proyecto tuyo).
 2. Es **accionable**: código, configuración o instrucciones paso a paso — no solo opinión o teoría sin ejemplo.
-3. Pertenece a uno de los tres pilares del repo: **web**, **mobile** (iOS/Android/cross-platform) o **automatización** de sistemas/workflows/testing.
+3. Pertenece a una de las cinco plataformas del repo: **web**, **mobile** (iOS/Android/cross-platform), **automatización** de sistemas/workflows/testing, **diseño** de producto (UI/UX) o **video**.
 
 **No entra:**
 - Contenido sin código ni pasos concretos (eso es un blog post, no un skill/snippet/guide).
@@ -39,6 +39,24 @@ Este documento es la referencia para decidir si un recurso nuevo pertenece a
 - **`browser-testing/`**: automatización de navegador para testing o scraping legítimo (Playwright, Puppeteer, Selenium).
 - **`ci-cd-infra/`**: pipelines de integración/despliegue continuo e infraestructura como código.
 
+### `design/`
+Es una plataforma propia (no una subcarpeta de `web/` ni `mobile/`) porque
+un design token o un patrón de componente sirven para las dos por igual —
+vive acá cualquier recurso que sea sobre el **diseño de producto en sí**,
+no sobre su implementación en un stack particular.
+- **`design-tokens/`**: definición y pipeline de tokens (color, tipografía, espaciado, sombras) y cómo se transforman a variables de código para web y mobile.
+- **`component-systems/`**: patrones de sistemas de componentes (estados de un botón, specs de un modal, primitivas accesibles sin estilo), independientes de si el consumidor final es React web o una app nativa.
+- **`handoff/`**: flujos de traspaso diseño → código (qué exportar, cómo nombrar assets, qué información necesita quien implementa) — no es "cómo usar Figma", es el criterio de qué información cruza la frontera diseño/código.
+- No entran tutoriales de manejo de una herramienta de diseño (Figma, Sketch) en sí — eso ya lo cubre la documentación oficial de la herramienta. Acá va el patrón/criterio, no el manual de uso.
+
+### `video/`
+También plataforma propia: mezcla código (reproducción/procesamiento en
+el navegador) con producción de contenido (guiones, formatos de
+exportación), que son disciplinas distintas pero ambas caen bajo "video".
+- **`playback/`**: reproducción de video en el navegador (streaming adaptativo HLS/DASH, players con UI custom, accesibilidad de controles de video).
+- **`processing/`**: procesamiento/transcodificación de video en el cliente o el servidor (recorte, conversión de formato, extracción de frames).
+- **`production-marketing/`**: criterios de producción para video de marketing/producto (estructura de guion, especificaciones de exportación por canal — App Store, redes sociales). Este sub-pilar es mayormente `guides/`, no código — no hay "repos exitosos" equivalentes para esto, así que se apoya en criterio propio documentado igual de explícito que el resto.
+
 ## Duda recurrente: ¿"skill", "snippet" o "guide"?
 
 | Si el recurso... | Va en... |
@@ -46,3 +64,18 @@ Este documento es la referencia para decidir si un recurso nuevo pertenece a
 | Le decís a una IA "hacé esto" y sigue pasos con un objetivo | `skills/` |
 | Es un bloque de código que resuelve una cosa puntual, sin pasos | `snippets/` |
 | Explica un criterio o trade-off, con o sin código de apoyo | `guides/` |
+
+## Cómo se escribe un recurso: síntesis, no copia
+
+Cada skill/snippet/guide se escribe **estudiando cómo resuelven el mismo
+problema varios repos exitosos** (ver [`SOURCES.md`](SOURCES.md)) y destilando
+el enfoque común entre ellos — no transcribiendo el código o la documentación
+de uno solo. La idea es la misma que comparar varios libros de historia sobre
+el mismo período: cada "editorial" (repo) tiene su enfoque, y lo que va en
+este repo es la síntesis propia, escrita de cero, en un formato parseable
+tanto por una persona como por cualquier IA.
+
+En la práctica:
+- Antes de escribir un recurso nuevo, revisar qué repos relevantes ya están en `SOURCES.md` para ese pilar (o agregar uno si falta).
+- El recurso final no cita ni reproduce código de esos repos — lo referencia por nombre en una sección **"Fuentes"** al final (ver [`TEMPLATE.md`](TEMPLATE.md)), como trazabilidad de qué se estudió para escribirlo.
+- Si dos repos resuelven lo mismo de formas distintas, el recurso puede mencionar ambos enfoques (ej. "a diferencia de X, que hace A, acá se opta por B porque...").

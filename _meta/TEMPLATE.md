@@ -1,6 +1,6 @@
 # Plantillas de documentación
 
-> **Ejemplos reales y funcionales** (además de los esqueletos de abajo):
+> **Ejemplos reales y detallados** (además de los esqueletos de abajo):
 > - `skill` → [`web/animation/skills/css-scroll-reveal/SKILL.md`](../web/animation/skills/css-scroll-reveal/SKILL.md)
 > - `snippet` → [`web/server/snippets/rate-limit-express/README.md`](../web/server/snippets/rate-limit-express/README.md)
 > - `guide` → [`mobile/cross-platform/guides/flutter-vs-react-native/README.md`](../mobile/cross-platform/guides/flutter-vs-react-native/README.md)
@@ -17,13 +17,32 @@ mobile/ios/guides/swiftui-state-management/README.md
 El nombre de la carpeta usa `kebab-case` y describe el recurso, no la
 tecnología sola (`css-scroll-reveal`, no `gsap`).
 
+## Regla de fondo: profundidad, no tarjeta de referencia
+
+Un recurso de este repo **no es un resumen ni una hoja de trucos**. El
+`summary` del frontmatter existe solo para que una IA lo descarte o lo elija
+rápido entre muchos candidatos — el cuerpo del documento tiene que explicar
+el problema con profundidad real: por qué existe, qué alternativas hay, por
+qué se descartaron, qué falla si se hace mal, y cómo se ve el código
+completo, no un fragmento ilustrativo.
+
+Al mismo tiempo, nada acá se copia palabra por palabra de una fuente. Cada
+recurso se escribe **de cero**, en base a haber estudiado cómo resuelven el
+mismo problema varios repos exitosos (ver [`SOURCES.md`](SOURCES.md)),
+sintetizando el enfoque común y señalando dónde difieren — nunca
+transcribiendo su código o su documentación.
+
 ---
 
 ## 1. `skills/` — formato Claude Code
 
 El archivo se llama **`SKILL.md`** y el frontmatter sigue el formato oficial
-de [Claude Code Skills](https://docs.claude.com/claude-code/skills) para que
-sea invocable directamente, además de legible por cualquier otra IA o humano.
+de [Claude Code Skills](https://docs.claude.com/claude-code/skills) (solo
+`name` + `description`) para que sea invocable directamente. Todo el resto
+del detalle va en el cuerpo, no en el frontmatter. Para ver ejemplos
+oficiales de referencia de este mismo formato (fuera del scope de este
+repo, pero útil para calibrar estilo), ver
+[`anthropics/skills`](https://github.com/anthropics/skills).
 
 ```markdown
 ---
@@ -34,19 +53,30 @@ description: Revela elementos con una animación al hacer scroll, usando solo CS
 # CSS Scroll Reveal
 
 ## Contexto
-Una línea: qué problema resuelve y por qué existe este skill.
+Párrafo real: qué problema resuelve, por qué existe (qué pasa si no se hace
+esto — ej. animaciones que corren fuera de pantalla y desperdician CPU), y
+en qué categoría de soluciones se ubica frente a las alternativas conocidas.
 
 ## Cuándo usarlo
-- Bullet de la situación concreta que lo dispara.
+Varios bullets con la situación concreta, no una sola línea genérica.
 
 ## Cuándo NO usarlo
-- Casos donde este approach es la elección equivocada (ej: si ya hay GSAP en el proyecto, usar ScrollTrigger en su lugar).
+Varios bullets explicando *por qué* falla en cada caso, no solo el caso.
 
 ## Pasos / Código
-Código mínimo y funcional, listo para copiar.
+Código completo y funcional (no un fragmento cortado), con comentarios
+solo donde el "por qué" no sea obvio, y una explicación en prosa de las
+partes no triviales (ej. por qué se usa `unobserve` acá).
+
+## Edge cases / errores comunes
+Qué falla si se implementa mal, con qué síntoma se nota.
 
 ## Compatibilidad
-Navegadores / versiones / OS si aplica.
+Navegadores / versiones / OS, con la fuente de esa afirmación si aplica.
+
+## Fuentes
+Qué repos se estudiaron para escribir esto y qué enfoque tiene cada uno
+frente a esta solución (ver sección de abajo).
 ```
 
 ## 2. `snippets/` — código puntual
@@ -65,7 +95,22 @@ when_not_to_use: Si necesitás rate limit distribuido entre múltiples instancia
 
 # Rate limit básico en Express
 
-(código + una línea de uso)
+## Contexto
+Por qué hace falta rate limiting acá, qué pasa sin él, y qué otras formas
+de resolverlo existen (proxy, API gateway, librería dedicada) y por qué
+este snippet elige la más simple.
+
+## Código completo
+Código funcional completo, no truncado.
+
+## Uso
+Cómo se integra, con un ejemplo real de llamada.
+
+## Limitaciones conocidas
+Qué no resuelve este snippet y cuándo eso importa.
+
+## Fuentes
+Qué enfoques existentes se compararon antes de escribir este snippet.
 ```
 
 ## 3. `guides/` — criterio y contexto
@@ -83,7 +128,11 @@ summary: Trade-offs concretos para elegir framework cross-platform según el equ
 
 # Cuándo usar Flutter vs React Native
 
-(contenido, con o sin código de apoyo)
+Desarrollo completo del criterio, con secciones por escenario, contra-
+ejemplos, y explícitamente qué NO responde esta guía.
+
+## Fuentes
+Qué se estudió de cada proyecto para llegar a este criterio.
 ```
 
 ---
@@ -96,8 +145,19 @@ summary: Trade-offs concretos para elegir framework cross-platform según el equ
 | `platform` | sí | `web` \| `mobile` \| `automation` |
 | `pillar` | sí | Uno de los pilares definidos en el `README.md` raíz |
 | `tags` | sí | Lista corta, en minúsculas, para búsqueda |
-| `summary` | sí | Una sola línea, qué resuelve |
+| `summary` | sí | Una sola línea — es un filtro rápido para la IA, no un reemplazo del cuerpo |
 | `when_not_to_use` | recomendado | Evita que una IA lo aplique mal |
 | `compatibility` | si aplica | Navegadores, OS, versiones de framework |
 
-No hace falta un campo `when_to_use` separado si el `summary` ya lo deja claro.
+El `summary` corto es intencional (sirve para escanear rápido muchos
+recursos), pero **el cuerpo del documento no hereda ese límite** — ahí va el
+detalle completo.
+
+## La sección "Fuentes"
+
+Todo recurso termina con una sección `## Fuentes` que lista los repos
+estudiados (nombre + link, tomados de [`SOURCES.md`](SOURCES.md)) y, para
+cada uno, una frase sobre qué enfoque tiene y en qué se diferencia de la
+solución que este recurso propone. No es una bibliografía decorativa: es la
+evidencia de que el recurso sintetiza varias fuentes reales y no es una
+opinión sin sustento ni una copia de una sola.
