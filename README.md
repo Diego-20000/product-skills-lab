@@ -26,8 +26,8 @@ por ser el más portable y auto-descriptivo disponible hoy.
 
 | Plataforma | Pilares |
 |---|---|
-| `web/` | `animation`, `responsive`, `security`, `cybersecurity`, `server`, `search` |
-| `mobile/` | `ios`, `android`, `cross-platform` |
+| `web/` | `animation`, `responsive`, `security-defense`, `security-offense`, `server`, `search`, `testing`, `accessibility` |
+| `mobile/` | `ios`, `android`, `cross-platform`, `testing`, `accessibility` |
 | `automation/` | `workflows-rpa`, `browser-testing`, `ci-cd-infra` |
 
 ## Qué entra y qué no

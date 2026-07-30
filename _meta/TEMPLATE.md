@@ -1,5 +1,10 @@
 # Plantillas de documentación
 
+> **Ejemplos reales y funcionales** (además de los esqueletos de abajo):
+> - `skill` → [`web/animation/skills/css-scroll-reveal/SKILL.md`](../web/animation/skills/css-scroll-reveal/SKILL.md)
+> - `snippet` → [`web/server/snippets/rate-limit-express/README.md`](../web/server/snippets/rate-limit-express/README.md)
+> - `guide` → [`mobile/cross-platform/guides/flutter-vs-react-native/README.md`](../mobile/cross-platform/guides/flutter-vs-react-native/README.md)
+
 Cada recurso vive en su propia carpeta dentro de `skills/`, `snippets/` o
 `guides/` de un pilar, por ejemplo:
 
