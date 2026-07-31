@@ -1,6 +1,7 @@
 ---
 name: channel-export-presets
 description: Exporta un master de video a los formatos exactos que exige cada canal (App Store, Google Play, TikTok/Reels, YouTube, web) con comandos FFmpeg reproducibles, en vez de re-exportar a mano desde el editor. Usar al preparar la entrega de un video para varios destinos.
+tags: [video, ffmpeg, export, marketing, social-media]
 ---
 
 # Channel Export Presets

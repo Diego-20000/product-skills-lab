@@ -1,6 +1,7 @@
 ---
 name: client-side-site-search
 description: Agrega búsqueda instantánea a un sitio estático o documentación construyendo un índice en build time y resolviendo las queries en el navegador con FlexSearch, sin servidor ni servicio externo. Usar cuando piden "un buscador" en un sitio de contenido acotado.
+tags: [search, flexsearch, static-site, client-side, indexing]
 ---
 
 # Client-Side Site Search

@@ -1,0 +1,31 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Cancela corridas obsoletas del mismo PR (ver guides/pipeline-stages)
+concurrency:
+  group: validate-${{ github.head_ref || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Valida frontmatter, secciones obligatorias, code fences y links
+      # internos, y falla si _meta/index.json quedó desactualizado.
+      - name: Validar recursos e índice
+        run: node scripts/build-index.mjs --check

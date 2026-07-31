@@ -1,6 +1,7 @@
 ---
 name: accessible-modal-dialog
 description: Implementa un modal accesible con foco atrapado, cierre por Escape, restauración de foco al abrir/cerrar y contenido de fondo inerte, usando el elemento nativo <dialog>. Usar cuando hay que construir un modal, drawer o popup desde cero.
+tags: [a11y, dialog, focus-trap, keyboard, html]
 ---
 
 # Accessible Modal Dialog

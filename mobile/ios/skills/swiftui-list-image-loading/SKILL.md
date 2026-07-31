@@ -1,6 +1,7 @@
 ---
 name: swiftui-list-image-loading
 description: Carga imágenes remotas en listas de SwiftUI sin trabas al scrollear, con cacheo en memoria y disco, cancelación al reciclarse la celda y redimensionado antes de decodificar. Usar cuando una lista con imágenes de red se siente lenta o consume demasiada memoria.
+tags: [ios, swiftui, performance, images, caching]
 ---
 
 # SwiftUI List Image Loading

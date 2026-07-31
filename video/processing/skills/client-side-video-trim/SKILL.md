@@ -1,6 +1,7 @@
 ---
 name: client-side-video-trim
 description: Recorta, convierte o extrae frames de un video en el navegador con ffmpeg.wasm, sin subir el archivo a un servidor, incluyendo carga diferida del binario WASM y reporte de progreso. Usar cuando el procesamiento debe ocurrir del lado del cliente por privacidad, costo o latencia.
+tags: [video, ffmpeg, wasm, processing, privacy]
 ---
 
 # Client-Side Video Trim

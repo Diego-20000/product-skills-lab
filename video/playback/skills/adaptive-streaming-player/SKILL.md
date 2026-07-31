@@ -1,6 +1,7 @@
 ---
 name: adaptive-streaming-player
 description: Reproduce streaming adaptativo HLS en cualquier navegador usando hls.js con fallback al soporte nativo de Safari, con controles accesibles y manejo de errores recuperables. Usar cuando hay que reproducir video de más de unos pocos minutos o con calidad variable según la conexión.
+tags: [video, hls, streaming, playback, a11y]
 ---
 
 # Adaptive Streaming Player

@@ -1,6 +1,7 @@
 ---
 name: tokens-to-platform-variables
 description: Define design tokens en un único archivo fuente y los transforma automáticamente a variables CSS, Swift, Kotlin y JS con Style Dictionary, para que un cambio de color se propague a web y mobile sin edición manual. Usar al montar un design system que sirve a más de una plataforma.
+tags: [design-tokens, style-dictionary, design-system, build, cross-platform]
 ---
 
 # Tokens to Platform Variables

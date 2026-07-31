@@ -1,6 +1,7 @@
 ---
 name: platform-adaptive-components
 description: Estructura componentes cross-platform que comparten lógica pero adaptan comportamiento e interfaz a las convenciones de iOS y Android, en vez de forzar una UI idéntica en ambos. Usar cuando una app React Native o Flutter "se siente ajena" en una de las dos plataformas.
+tags: [react-native, flutter, cross-platform, architecture, ux]
 ---
 
 # Platform Adaptive Components

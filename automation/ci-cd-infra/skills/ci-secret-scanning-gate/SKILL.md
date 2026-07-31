@@ -1,6 +1,7 @@
 ---
 name: ci-secret-scanning-gate
 description: Monta una defensa en dos capas contra secretos filtrados — un hook pre-commit que bloquea antes de commitear y un paso de CI que audita el historial completo — con gitleaks. Usar al preparar un repo para hacerse público o al endurecer un pipeline.
+tags: [ci-cd, security, gitleaks, secrets, pre-commit]
 ---
 
 # CI Secret Scanning Gate

@@ -1,6 +1,7 @@
 ---
 name: mobile-labels-and-touch-targets
 description: Corrige los dos problemas de accesibilidad más frecuentes en apps móviles — controles sin etiqueta para VoiceOver/TalkBack y áreas táctiles por debajo del mínimo — en iOS nativo, Android nativo, React Native y Flutter. Usar al revisar accesibilidad de una app o antes de publicar.
+tags: [a11y, mobile, voiceover, talkback, touch-target]
 ---
 
 # Mobile Labels and Touch Targets

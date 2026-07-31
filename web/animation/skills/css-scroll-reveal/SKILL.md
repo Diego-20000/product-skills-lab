@@ -1,6 +1,7 @@
 ---
 name: css-scroll-reveal
 description: Revela elementos con una animación al hacer scroll, usando solo CSS (transiciones) + IntersectionObserver en JS vanilla, sin librerías. Usar cuando piden "animar al scrollear" y no hay ya una librería de animación en el proyecto.
+tags: [css, animation, intersection-observer, scroll, no-dependencies]
 ---
 
 # CSS Scroll Reveal

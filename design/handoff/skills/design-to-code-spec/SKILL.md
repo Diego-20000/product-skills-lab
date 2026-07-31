@@ -1,6 +1,7 @@
 ---
 name: design-to-code-spec
 description: Define qué información debe cruzar la frontera entre diseño y código para que un componente se implemente sin adivinar — comportamiento, estados, breakpoints, contenido variable y accesibilidad — más allá de medidas y colores. Usar al preparar o recibir un handoff.
+tags: [handoff, design-system, documentation, collaboration, figma]
 ---
 
 # Design to Code Spec

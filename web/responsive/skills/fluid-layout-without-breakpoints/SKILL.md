@@ -1,6 +1,7 @@
 ---
 name: fluid-layout-without-breakpoints
 description: Construye layouts y tipografía que se adaptan de forma continua usando clamp(), container queries y grid auto-fit, en vez de saltos discretos por media query. Usar cuando piden "que sea responsive" y el diseño no exige layouts radicalmente distintos por dispositivo.
+tags: [css, responsive, container-queries, clamp, grid]
 ---
 
 # Fluid Layout Without Breakpoints

@@ -44,10 +44,16 @@ oficiales de referencia de este mismo formato (fuera del scope de este
 repo, pero útil para calibrar estilo), ver
 [`anthropics/skills`](https://github.com/anthropics/skills).
 
+Además de `name` y `description`, se agrega `tags` — Claude Code ignora los
+campos que no conoce, así que no afecta la invocabilidad, y sin ellos el
+recurso queda invisible para las búsquedas por tema en
+[`index.json`](index.json).
+
 ```markdown
 ---
 name: css-scroll-reveal
 description: Revela elementos con una animación al hacer scroll, usando solo CSS (IntersectionObserver + clases). Usar cuando se pide "animar al scrollear" sin querer sumar una librería de animación.
+tags: [css, animation, intersection-observer, scroll, no-dependencies]
 ---
 
 # CSS Scroll Reveal

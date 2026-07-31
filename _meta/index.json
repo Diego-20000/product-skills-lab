@@ -1,0 +1,1182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "product-skills-lab",
+  "description": "Skills, snippets y guías reutilizables para construir productos digitales: web, mobile, automatización, diseño y video.",
+  "repository": "https://github.com/Diego-20000/product-skills-lab",
+  "license": "MIT",
+  "generatedAt": "2026-07-31",
+  "conventions": {
+    "layout": "<platform>/<pillar>/<type>/<name>/",
+    "types": {
+      "skill": "Instrucciones accionables paso a paso, en formato Claude Code (SKILL.md).",
+      "snippet": "Código copy-paste que resuelve una cosa concreta, sin flujo.",
+      "guide": "Criterio y trade-offs para una decisión, incluyendo qué NO responde."
+    },
+    "sources": "Cada recurso se escribe de cero sintetizando varios proyectos de referencia y los declara en su sección \"Fuentes\". El catálogo completo está en _meta/SOURCES.md."
+  },
+  "counts": {
+    "platforms": 5,
+    "pillars": 22,
+    "resources": 66,
+    "byType": {
+      "skill": 22,
+      "snippet": 22,
+      "guide": 22
+    }
+  },
+  "resources": [
+    {
+      "id": "web/accessibility/skill/accessible-modal-dialog",
+      "path": "web/accessibility/skills/accessible-modal-dialog/SKILL.md",
+      "platform": "web",
+      "pillar": "accessibility",
+      "type": "skill",
+      "name": "accessible-modal-dialog",
+      "title": "accessible-modal-dialog",
+      "summary": "Implementa un modal accesible con foco atrapado, cierre por Escape, restauración de foco al abrir/cerrar y contenido de fondo inerte, usando el elemento nativo <dialog>. Usar cuando hay que construir un modal, drawer o popup desde cero.",
+      "tags": [
+        "a11y",
+        "dialog",
+        "focus-trap",
+        "keyboard",
+        "html"
+      ]
+    },
+    {
+      "id": "web/accessibility/snippet/skip-link-and-visually-hidden",
+      "path": "web/accessibility/snippets/skip-link-and-visually-hidden/README.md",
+      "platform": "web",
+      "pillar": "accessibility",
+      "type": "snippet",
+      "name": "skip-link-and-visually-hidden",
+      "title": "Skip link y utilidad visually-hidden",
+      "summary": "Permite saltar la navegación repetitiva con un link que aparece al tabular, más la utilidad CSS correcta para texto solo audible por lector de pantalla.",
+      "tags": [
+        "a11y",
+        "css",
+        "keyboard",
+        "screen-reader",
+        "skip-link"
+      ],
+      "whenNotToUse": "No usar visually-hidden para ocultar contenido de todos — para eso va display:none o hidden, que sí lo sacan del árbol de accesibilidad."
+    },
+    {
+      "id": "web/accessibility/guide/accessibility-priorities",
+      "path": "web/accessibility/guides/accessibility-priorities/README.md",
+      "platform": "web",
+      "pillar": "accessibility",
+      "type": "guide",
+      "name": "accessibility-priorities",
+      "title": "Prioridades de accesibilidad — por dónde empezar",
+      "summary": "Orden de trabajo para hacer accesible un sitio existente, priorizando por cuántas personas quedan bloqueadas en vez de por el orden del checklist de WCAG.",
+      "tags": [
+        "a11y",
+        "wcag",
+        "priorities",
+        "decision",
+        "audit"
+      ]
+    },
+    {
+      "id": "web/animation/skill/css-scroll-reveal",
+      "path": "web/animation/skills/css-scroll-reveal/SKILL.md",
+      "platform": "web",
+      "pillar": "animation",
+      "type": "skill",
+      "name": "css-scroll-reveal",
+      "title": "css-scroll-reveal",
+      "summary": "Revela elementos con una animación al hacer scroll, usando solo CSS (transiciones) + IntersectionObserver en JS vanilla, sin librerías. Usar cuando piden \"animar al scrollear\" y no hay ya una librería de animación en el proyecto.",
+      "tags": [
+        "css",
+        "animation",
+        "intersection-observer",
+        "scroll",
+        "no-dependencies"
+      ]
+    },
+    {
+      "id": "web/animation/snippet/respect-reduced-motion",
+      "path": "web/animation/snippets/respect-reduced-motion/README.md",
+      "platform": "web",
+      "pillar": "animation",
+      "type": "snippet",
+      "name": "respect-reduced-motion",
+      "title": "Respetar prefers-reduced-motion",
+      "summary": "Desactiva o reduce animaciones para usuarios que configuraron \"reducir movimiento\" en su sistema operativo, con una regla CSS global y un helper JS para animaciones imperativas.",
+      "tags": [
+        "css",
+        "accessibility",
+        "animation",
+        "motion"
+      ],
+      "whenNotToUse": "No aplicar la regla global a animaciones que comunican información esencial (una barra de progreso, un spinner de carga); esas deben reducirse, no eliminarse."
+    },
+    {
+      "id": "web/animation/guide/css-waapi-or-library",
+      "path": "web/animation/guides/css-waapi-or-library/README.md",
+      "platform": "web",
+      "pillar": "animation",
+      "type": "guide",
+      "name": "css-waapi-or-library",
+      "title": "Animar con CSS, Web Animations API o una librería",
+      "summary": "Criterio para elegir la herramienta de animación según el tipo de movimiento, sin sumar una librería a un problema que el navegador ya resuelve.",
+      "tags": [
+        "animation",
+        "css",
+        "waapi",
+        "gsap",
+        "decision",
+        "performance"
+      ]
+    },
+    {
+      "id": "web/responsive/skill/fluid-layout-without-breakpoints",
+      "path": "web/responsive/skills/fluid-layout-without-breakpoints/SKILL.md",
+      "platform": "web",
+      "pillar": "responsive",
+      "type": "skill",
+      "name": "fluid-layout-without-breakpoints",
+      "title": "fluid-layout-without-breakpoints",
+      "summary": "Construye layouts y tipografía que se adaptan de forma continua usando clamp(), container queries y grid auto-fit, en vez de saltos discretos por media query. Usar cuando piden \"que sea responsive\" y el diseño no exige layouts radicalmente distintos por dispositivo.",
+      "tags": [
+        "css",
+        "responsive",
+        "container-queries",
+        "clamp",
+        "grid"
+      ]
+    },
+    {
+      "id": "web/responsive/snippet/responsive-images-srcset",
+      "path": "web/responsive/snippets/responsive-images-srcset/README.md",
+      "platform": "web",
+      "pillar": "responsive",
+      "type": "snippet",
+      "name": "responsive-images-srcset",
+      "title": "Imágenes responsive con srcset y sizes",
+      "summary": "Sirve la resolución de imagen adecuada a cada pantalla con srcset y sizes, y formatos modernos con <picture>, evitando descargar un archivo de 2000px para mostrarlo a 400px.",
+      "tags": [
+        "html",
+        "images",
+        "performance",
+        "srcset",
+        "picture"
+      ],
+      "whenNotToUse": "Para iconos, logos o cualquier gráfico vectorial, usar SVG — escala sin pérdida y no necesita variantes por resolución."
+    },
+    {
+      "id": "web/responsive/guide/choosing-css-strategy",
+      "path": "web/responsive/guides/choosing-css-strategy/README.md",
+      "platform": "web",
+      "pillar": "responsive",
+      "type": "guide",
+      "name": "choosing-css-strategy",
+      "title": "Elegir estrategia CSS — utility-first, componentes o CSS propio",
+      "summary": "Criterio para elegir entre un framework de utilidades, uno de componentes o CSS propio, según equipo, identidad visual y ciclo de vida del proyecto.",
+      "tags": [
+        "css",
+        "tailwind",
+        "bootstrap",
+        "decision",
+        "architecture"
+      ]
+    },
+    {
+      "id": "web/search/skill/client-side-site-search",
+      "path": "web/search/skills/client-side-site-search/SKILL.md",
+      "platform": "web",
+      "pillar": "search",
+      "type": "skill",
+      "name": "client-side-site-search",
+      "title": "client-side-site-search",
+      "summary": "Agrega búsqueda instantánea a un sitio estático o documentación construyendo un índice en build time y resolviendo las queries en el navegador con FlexSearch, sin servidor ni servicio externo. Usar cuando piden \"un buscador\" en un sitio de contenido acotado.",
+      "tags": [
+        "search",
+        "flexsearch",
+        "static-site",
+        "client-side",
+        "indexing"
+      ]
+    },
+    {
+      "id": "web/search/snippet/highlight-search-matches",
+      "path": "web/search/snippets/highlight-search-matches/README.md",
+      "platform": "web",
+      "pillar": "search",
+      "type": "snippet",
+      "name": "highlight-search-matches",
+      "title": "Resaltar coincidencias de búsqueda sin XSS",
+      "summary": "Marca los términos buscados dentro de un resultado usando nodos de texto en vez de innerHTML, con normalización de acentos y extracción del fragmento relevante.",
+      "tags": [
+        "search",
+        "highlight",
+        "xss",
+        "dom",
+        "ux"
+      ],
+      "whenNotToUse": "Si el motor de búsqueda ya devuelve fragmentos resaltados (Elasticsearch highlight, Meilisearch _formatted), usar esos — están alineados con el análisis del índice."
+    },
+    {
+      "id": "web/search/guide/choosing-search-engine",
+      "path": "web/search/guides/choosing-search-engine/README.md",
+      "platform": "web",
+      "pillar": "search",
+      "type": "guide",
+      "name": "choosing-search-engine",
+      "title": "Elegir motor de búsqueda — cliente, Meilisearch/Typesense o Elasticsearch",
+      "summary": "Criterio para elegir dónde vive la búsqueda según tamaño del corpus, frecuencia de cambio y complejidad de las consultas, evitando el sobredimensionamiento clásico.",
+      "tags": [
+        "search",
+        "elasticsearch",
+        "meilisearch",
+        "typesense",
+        "decision",
+        "architecture"
+      ]
+    },
+    {
+      "id": "web/security-defense/skill/http-security-headers",
+      "path": "web/security-defense/skills/http-security-headers/SKILL.md",
+      "platform": "web",
+      "pillar": "security-defense",
+      "type": "skill",
+      "name": "http-security-headers",
+      "title": "http-security-headers",
+      "summary": "Configura y explica los headers HTTP de seguridad esenciales (CSP, HSTS, X-Content-Type-Options, Referrer-Policy) en una app Express/Node, yendo más allá de instalar helmet con su configuración por defecto. Usar cuando piden \"hardening\" o \"seguridad básica\" de un backend web.",
+      "tags": [
+        "security",
+        "csp",
+        "headers",
+        "helmet",
+        "express"
+      ]
+    },
+    {
+      "id": "web/security-defense/snippet/sanitize-user-html",
+      "path": "web/security-defense/snippets/sanitize-user-html/README.md",
+      "platform": "web",
+      "pillar": "security-defense",
+      "type": "snippet",
+      "name": "sanitize-user-html",
+      "title": "Sanitizar HTML de usuario con DOMPurify",
+      "summary": "Limpia HTML generado por usuarios antes de insertarlo en el DOM, con configuraciones por nivel de confianza y un hook para forzar links externos seguros.",
+      "tags": [
+        "xss",
+        "dompurify",
+        "sanitization",
+        "security"
+      ],
+      "whenNotToUse": "Si el contenido es texto plano, usar textContent en vez de sanitizar HTML — es más rápido y no tiene superficie de ataque."
+    },
+    {
+      "id": "web/security-defense/guide/sessions-cookies-vs-jwt",
+      "path": "web/security-defense/guides/sessions-cookies-vs-jwt/README.md",
+      "platform": "web",
+      "pillar": "security-defense",
+      "type": "guide",
+      "name": "sessions-cookies-vs-jwt",
+      "title": "Sesiones — cookies de servidor vs JWT",
+      "summary": "Criterio para elegir entre sesiones con estado en el servidor y tokens autocontenidos, con foco en el problema que casi siempre se subestima: la revocación.",
+      "tags": [
+        "auth",
+        "sessions",
+        "jwt",
+        "cookies",
+        "security",
+        "decision"
+      ]
+    },
+    {
+      "id": "web/security-offense/skill/authorized-vuln-scan",
+      "path": "web/security-offense/skills/authorized-vuln-scan/SKILL.md",
+      "platform": "web",
+      "pillar": "security-offense",
+      "type": "skill",
+      "name": "authorized-vuln-scan",
+      "title": "authorized-vuln-scan",
+      "summary": "Monta un escaneo de vulnerabilidades reproducible contra una aplicación propia (o con autorización escrita) usando nuclei y OWASP ZAP, y traduce los hallazgos en trabajo priorizado. Usar para validar el hardening de un sistema propio antes de salir a producción.",
+      "tags": [
+        "security",
+        "scanning",
+        "nuclei",
+        "zap",
+        "authorized-testing"
+      ]
+    },
+    {
+      "id": "web/security-offense/snippet/custom-nuclei-template",
+      "path": "web/security-offense/snippets/custom-nuclei-template/README.md",
+      "platform": "web",
+      "pillar": "security-offense",
+      "type": "snippet",
+      "name": "custom-nuclei-template",
+      "title": "Template propio de nuclei para misconfigs internas",
+      "summary": "Escribe plantillas YAML de nuclei para detectar configuraciones inseguras específicas de tu organización que ningún template público puede conocer.",
+      "tags": [
+        "nuclei",
+        "scanning",
+        "yaml",
+        "security",
+        "authorized-testing"
+      ],
+      "whenNotToUse": "Solo contra sistemas propios o con autorización escrita. Para vulnerabilidades públicas ya existen templates de la comunidad — no reescribirlos."
+    },
+    {
+      "id": "web/security-offense/guide/scan-pentest-or-audit",
+      "path": "web/security-offense/guides/scan-pentest-or-audit/README.md",
+      "platform": "web",
+      "pillar": "security-offense",
+      "type": "guide",
+      "name": "scan-pentest-or-audit",
+      "title": "Escaneo, pentest o auditoría — qué corresponde en cada caso",
+      "summary": "Criterio para elegir qué tipo de evaluación de seguridad corresponde según lo que se quiere descubrir, y qué clase de problema encuentra cada una.",
+      "tags": [
+        "security",
+        "pentest",
+        "scanning",
+        "audit",
+        "decision",
+        "authorized-testing"
+      ]
+    },
+    {
+      "id": "web/server/skill/api-error-handling",
+      "path": "web/server/skills/api-error-handling/SKILL.md",
+      "platform": "web",
+      "pillar": "server",
+      "type": "skill",
+      "name": "api-error-handling",
+      "title": "api-error-handling",
+      "summary": "Centraliza el manejo de errores de una API Node/Express en un solo middleware, con errores tipados, códigos HTTP correctos y respuestas de formato consistente que no filtran detalles internos. Usar cuando una API devuelve errores inconsistentes, stack traces al cliente o 500 para todo.",
+      "tags": [
+        "nodejs",
+        "express",
+        "error-handling",
+        "api",
+        "middleware"
+      ]
+    },
+    {
+      "id": "web/server/snippet/rate-limit-express",
+      "path": "web/server/snippets/rate-limit-express/README.md",
+      "platform": "web",
+      "pillar": "server",
+      "type": "snippet",
+      "name": "rate-limit-express",
+      "title": "Rate limit básico en Express",
+      "summary": "Middleware de rate limiting en memoria para Express, sin dependencias externas, para proteger endpoints de abuso básico.",
+      "tags": [
+        "express",
+        "middleware",
+        "rate-limiting",
+        "nodejs"
+      ],
+      "whenNotToUse": "Si la app corre en más de una instancia (múltiples procesos/contenedores), este límite es por proceso y no es consistente entre instancias — usar un store compartido (Redis) en su lugar."
+    },
+    {
+      "id": "web/server/guide/choosing-node-framework",
+      "path": "web/server/guides/choosing-node-framework/README.md",
+      "platform": "web",
+      "pillar": "server",
+      "type": "guide",
+      "name": "choosing-node-framework",
+      "title": "Elegir framework Node — Express, Fastify o NestJS",
+      "summary": "Criterio para elegir framework de backend Node según tamaño de equipo, necesidad de estructura y prioridades, sin que el rendimiento sea el factor decisivo que casi nunca es.",
+      "tags": [
+        "nodejs",
+        "express",
+        "fastify",
+        "nestjs",
+        "decision",
+        "architecture"
+      ]
+    },
+    {
+      "id": "web/testing/skill/testing-by-accessible-role",
+      "path": "web/testing/skills/testing-by-accessible-role/SKILL.md",
+      "platform": "web",
+      "pillar": "testing",
+      "type": "skill",
+      "name": "testing-by-accessible-role",
+      "title": "testing-by-accessible-role",
+      "summary": "Escribe tests de componentes seleccionando elementos por rol accesible y texto visible en vez de por clase CSS, test-id o estado interno, de modo que el test falle solo cuando se rompe algo que el usuario percibe. Usar al escribir o refactorizar tests de UI frágiles.",
+      "tags": [
+        "testing",
+        "testing-library",
+        "a11y",
+        "selectors",
+        "playwright"
+      ]
+    },
+    {
+      "id": "web/testing/snippet/custom-render-with-providers",
+      "path": "web/testing/snippets/custom-render-with-providers/README.md",
+      "platform": "web",
+      "pillar": "testing",
+      "type": "snippet",
+      "name": "custom-render-with-providers",
+      "title": "Render de test con providers",
+      "summary": "Envuelve el render de Testing Library con los providers reales de la app (router, query client, tema, i18n) para no repetir el wrapper en cada test.",
+      "tags": [
+        "testing-library",
+        "react",
+        "setup",
+        "providers",
+        "vitest"
+      ],
+      "whenNotToUse": "Si el componente bajo test no consume ningún contexto, usar el render normal — envolverlo agrega tiempo de setup sin beneficio."
+    },
+    {
+      "id": "web/testing/guide/what-to-test-at-each-level",
+      "path": "web/testing/guides/what-to-test-at-each-level/README.md",
+      "platform": "web",
+      "pillar": "testing",
+      "type": "guide",
+      "name": "what-to-test-at-each-level",
+      "title": "Qué testear en cada nivel",
+      "summary": "Criterio para decidir en qué nivel cubrir cada comportamiento, evitando tanto la suite de solo unitarios que no detecta nada como la de solo E2E que tarda una hora.",
+      "tags": [
+        "testing",
+        "pyramid",
+        "unit",
+        "integration",
+        "e2e",
+        "decision"
+      ]
+    },
+    {
+      "id": "mobile/accessibility/skill/mobile-labels-and-touch-targets",
+      "path": "mobile/accessibility/skills/mobile-labels-and-touch-targets/SKILL.md",
+      "platform": "mobile",
+      "pillar": "accessibility",
+      "type": "skill",
+      "name": "mobile-labels-and-touch-targets",
+      "title": "mobile-labels-and-touch-targets",
+      "summary": "Corrige los dos problemas de accesibilidad más frecuentes en apps móviles — controles sin etiqueta para VoiceOver/TalkBack y áreas táctiles por debajo del mínimo — en iOS nativo, Android nativo, React Native y Flutter. Usar al revisar accesibilidad de una app o antes de publicar.",
+      "tags": [
+        "a11y",
+        "mobile",
+        "voiceover",
+        "talkback",
+        "touch-target"
+      ]
+    },
+    {
+      "id": "mobile/accessibility/snippet/accessible-icon-button-rn",
+      "path": "mobile/accessibility/snippets/accessible-icon-button-rn/README.md",
+      "platform": "mobile",
+      "pillar": "accessibility",
+      "type": "snippet",
+      "name": "accessible-icon-button-rn",
+      "title": "Botón de ícono accesible en React Native",
+      "summary": "Componente de botón con solo ícono que cumple etiqueta accesible, área táctil mínima y estados anunciados correctamente en VoiceOver y TalkBack.",
+      "tags": [
+        "react-native",
+        "a11y",
+        "voiceover",
+        "talkback",
+        "touch-target"
+      ],
+      "whenNotToUse": "Si el botón tiene texto visible, no hace falta accessibilityLabel — el texto ya es el nombre accesible y duplicarlo hace que se lea dos veces."
+    },
+    {
+      "id": "mobile/accessibility/guide/pre-release-a11y-checklist",
+      "path": "mobile/accessibility/guides/pre-release-a11y-checklist/README.md",
+      "platform": "mobile",
+      "pillar": "accessibility",
+      "type": "guide",
+      "name": "pre-release-a11y-checklist",
+      "title": "Accesibilidad móvil antes de publicar",
+      "summary": "Orden de verificación de accesibilidad antes de subir una app a las tiendas, priorizado por cuántas personas quedan bloqueadas y no por el orden del checklist.",
+      "tags": [
+        "a11y",
+        "mobile",
+        "voiceover",
+        "talkback",
+        "checklist",
+        "decision"
+      ]
+    },
+    {
+      "id": "mobile/android/skill/compose-list-performance",
+      "path": "mobile/android/skills/compose-list-performance/SKILL.md",
+      "platform": "mobile",
+      "pillar": "android",
+      "type": "skill",
+      "name": "compose-list-performance",
+      "title": "compose-list-performance",
+      "summary": "Corrige listas de Jetpack Compose que se traban al scrollear, aplicando keys estables, estado elevado correctamente, lambdas diferidas y clases estables para evitar recomposiciones innecesarias. Usar cuando una LazyColumn se siente lenta o pierde frames.",
+      "tags": [
+        "android",
+        "jetpack-compose",
+        "performance",
+        "recomposition",
+        "kotlin"
+      ]
+    },
+    {
+      "id": "mobile/android/snippet/okhttp-auth-interceptor",
+      "path": "mobile/android/snippets/okhttp-auth-interceptor/README.md",
+      "platform": "mobile",
+      "pillar": "android",
+      "type": "snippet",
+      "name": "okhttp-auth-interceptor",
+      "title": "Interceptor de auth con refresh en OkHttp",
+      "summary": "Agrega el token a cada request y renueva la sesión ante un 401 usando Authenticator de OkHttp, evitando renovaciones concurrentes duplicadas.",
+      "tags": [
+        "android",
+        "okhttp",
+        "kotlin",
+        "auth",
+        "retrofit",
+        "token-refresh"
+      ],
+      "whenNotToUse": "Si la API usa cookies de sesión, usar CookieJar en vez de este patrón — Authenticator está pensado para esquemas por token."
+    },
+    {
+      "id": "mobile/android/guide/compose-vs-views",
+      "path": "mobile/android/guides/compose-vs-views/README.md",
+      "platform": "mobile",
+      "pillar": "android",
+      "type": "guide",
+      "name": "compose-vs-views",
+      "title": "Compose o Views — cuándo migrar y cuánto",
+      "summary": "Criterio para elegir entre Jetpack Compose y el sistema de Views en Android, y estrategia de migración incremental para una base existente.",
+      "tags": [
+        "jetpack-compose",
+        "android-views",
+        "decision",
+        "migration",
+        "architecture"
+      ]
+    },
+    {
+      "id": "mobile/cross-platform/skill/platform-adaptive-components",
+      "path": "mobile/cross-platform/skills/platform-adaptive-components/SKILL.md",
+      "platform": "mobile",
+      "pillar": "cross-platform",
+      "type": "skill",
+      "name": "platform-adaptive-components",
+      "title": "platform-adaptive-components",
+      "summary": "Estructura componentes cross-platform que comparten lógica pero adaptan comportamiento e interfaz a las convenciones de iOS y Android, en vez de forzar una UI idéntica en ambos. Usar cuando una app React Native o Flutter \"se siente ajena\" en una de las dos plataformas.",
+      "tags": [
+        "react-native",
+        "flutter",
+        "cross-platform",
+        "architecture",
+        "ux"
+      ]
+    },
+    {
+      "id": "mobile/cross-platform/snippet/network-status-hook",
+      "path": "mobile/cross-platform/snippets/network-status-hook/README.md",
+      "platform": "mobile",
+      "pillar": "cross-platform",
+      "type": "snippet",
+      "name": "network-status-hook",
+      "title": "Hook de estado de conexión con detección real",
+      "summary": "Detecta si hay conexión a internet de verdad (no solo si hay Wi-Fi conectado) en React Native, distinguiendo \"conectado\" de \"alcanzable\" y evitando falsos positivos de portales cautivos.",
+      "tags": [
+        "react-native",
+        "offline",
+        "network",
+        "hook",
+        "connectivity"
+      ],
+      "whenNotToUse": "No usar para decidir si mostrar datos cacheados — para eso conviene una librería de caché (React Query) que ya maneja stale-while-revalidate."
+    },
+    {
+      "id": "mobile/cross-platform/guide/flutter-vs-react-native",
+      "path": "mobile/cross-platform/guides/flutter-vs-react-native/README.md",
+      "platform": "mobile",
+      "pillar": "cross-platform",
+      "type": "guide",
+      "name": "flutter-vs-react-native",
+      "title": "Cuándo usar Flutter vs React Native",
+      "summary": "Trade-offs concretos para elegir framework cross-platform según el equipo y el tipo de proyecto, sin declarar un ganador universal.",
+      "tags": [
+        "flutter",
+        "react-native",
+        "decision",
+        "cross-platform"
+      ]
+    },
+    {
+      "id": "mobile/ios/skill/swiftui-list-image-loading",
+      "path": "mobile/ios/skills/swiftui-list-image-loading/SKILL.md",
+      "platform": "mobile",
+      "pillar": "ios",
+      "type": "skill",
+      "name": "swiftui-list-image-loading",
+      "title": "swiftui-list-image-loading",
+      "summary": "Carga imágenes remotas en listas de SwiftUI sin trabas al scrollear, con cacheo en memoria y disco, cancelación al reciclarse la celda y redimensionado antes de decodificar. Usar cuando una lista con imágenes de red se siente lenta o consume demasiada memoria.",
+      "tags": [
+        "ios",
+        "swiftui",
+        "performance",
+        "images",
+        "caching"
+      ]
+    },
+    {
+      "id": "mobile/ios/snippet/keychain-secure-storage",
+      "path": "mobile/ios/snippets/keychain-secure-storage/README.md",
+      "platform": "mobile",
+      "pillar": "ios",
+      "type": "snippet",
+      "name": "keychain-secure-storage",
+      "title": "Almacenamiento seguro en Keychain",
+      "summary": "Guarda tokens y credenciales en el Keychain de iOS con una API tipada mínima, en vez de UserDefaults, que se guarda en texto plano y aparece en los backups.",
+      "tags": [
+        "swift",
+        "keychain",
+        "security",
+        "storage",
+        "tokens"
+      ],
+      "whenNotToUse": "Para preferencias no sensibles (tema, idioma, último filtro usado), UserDefaults es lo correcto — el Keychain es más lento y más complejo sin necesidad."
+    },
+    {
+      "id": "mobile/ios/guide/swiftui-vs-uikit",
+      "path": "mobile/ios/guides/swiftui-vs-uikit/README.md",
+      "platform": "mobile",
+      "pillar": "ios",
+      "type": "guide",
+      "name": "swiftui-vs-uikit",
+      "title": "SwiftUI o UIKit — cuándo cada uno",
+      "summary": "Criterio para elegir framework de UI en iOS, y para decidir cuánto migrar de una base UIKit existente sin reescribir por reescribir.",
+      "tags": [
+        "swiftui",
+        "uikit",
+        "ios",
+        "decision",
+        "architecture"
+      ]
+    },
+    {
+      "id": "mobile/testing/skill/maestro-smoke-flow",
+      "path": "mobile/testing/skills/maestro-smoke-flow/SKILL.md",
+      "platform": "mobile",
+      "pillar": "testing",
+      "type": "skill",
+      "name": "maestro-smoke-flow",
+      "title": "maestro-smoke-flow",
+      "summary": "Escribe un test E2E de humo para una app móvil en YAML con Maestro, cubriendo el camino crítico (login, acción principal, salida) con esperas implícitas y selectores estables. Usar cuando una app no tiene tests E2E y hace falta cobertura mínima rápido.",
+      "tags": [
+        "mobile",
+        "testing",
+        "maestro",
+        "e2e",
+        "yaml"
+      ]
+    },
+    {
+      "id": "mobile/testing/snippet/android-emulator-ci",
+      "path": "mobile/testing/snippets/android-emulator-ci/README.md",
+      "platform": "mobile",
+      "pillar": "testing",
+      "type": "snippet",
+      "name": "android-emulator-ci",
+      "title": "Emulador Android en CI con caché",
+      "summary": "Levanta un emulador Android en GitHub Actions con AVD cacheado y las opciones que evitan los cuelgues y la lentitud típicos de correr tests de UI en CI.",
+      "tags": [
+        "ci",
+        "android",
+        "emulator",
+        "github-actions",
+        "cache"
+      ],
+      "whenNotToUse": "Para tests unitarios puros (JVM) no hace falta emulador — corren en segundos con Robolectric o sin nada."
+    },
+    {
+      "id": "mobile/testing/guide/mobile-testing-strategy",
+      "path": "mobile/testing/guides/mobile-testing-strategy/README.md",
+      "platform": "mobile",
+      "pillar": "testing",
+      "type": "guide",
+      "name": "mobile-testing-strategy",
+      "title": "Estrategia de testing móvil — qué cubrir y dónde",
+      "summary": "Criterio para decidir qué testear en cada nivel en una app móvil, donde los tests de UI son mucho más caros y lentos que en web.",
+      "tags": [
+        "testing",
+        "mobile",
+        "appium",
+        "maestro",
+        "detox",
+        "strategy",
+        "decision"
+      ]
+    },
+    {
+      "id": "automation/browser-testing/skill/stable-e2e-selectors",
+      "path": "automation/browser-testing/skills/stable-e2e-selectors/SKILL.md",
+      "platform": "automation",
+      "pillar": "browser-testing",
+      "type": "skill",
+      "name": "stable-e2e-selectors",
+      "title": "stable-e2e-selectors",
+      "summary": "Elimina tests E2E intermitentes reemplazando esperas fijas por condiciones reales y selectores frágiles por selectores semánticos, con Playwright como referencia. Usar cuando una suite E2E falla de forma aleatoria y el equipo empezó a reintentarla en vez de confiar en ella.",
+      "tags": [
+        "testing",
+        "playwright",
+        "e2e",
+        "flakiness",
+        "selectors"
+      ]
+    },
+    {
+      "id": "automation/browser-testing/snippet/playwright-auth-state",
+      "path": "automation/browser-testing/snippets/playwright-auth-state/README.md",
+      "platform": "automation",
+      "pillar": "browser-testing",
+      "type": "snippet",
+      "name": "playwright-auth-state",
+      "title": "Login una vez y reusar el estado en Playwright",
+      "summary": "Autentica una sola vez en un proyecto de setup y reusa el storageState en todos los tests, en vez de repetir el login por cada uno.",
+      "tags": [
+        "playwright",
+        "auth",
+        "storage-state",
+        "setup",
+        "performance"
+      ],
+      "whenNotToUse": "Si el test verifica el propio flujo de login, debe hacerlo por la UI sin estado precargado — eso es justamente lo que se está probando."
+    },
+    {
+      "id": "automation/browser-testing/guide/playwright-vs-puppeteer-vs-selenium",
+      "path": "automation/browser-testing/guides/playwright-vs-puppeteer-vs-selenium/README.md",
+      "platform": "automation",
+      "pillar": "browser-testing",
+      "type": "guide",
+      "name": "playwright-vs-puppeteer-vs-selenium",
+      "title": "Cuándo usar Playwright vs Puppeteer vs Selenium",
+      "summary": "Trade-offs concretos entre los tres frameworks de automatización de navegador según protocolo, navegadores soportados y objetivo (testing vs scraping).",
+      "tags": [
+        "playwright",
+        "puppeteer",
+        "selenium",
+        "decision",
+        "browser-automation"
+      ]
+    },
+    {
+      "id": "automation/ci-cd-infra/skill/ci-secret-scanning-gate",
+      "path": "automation/ci-cd-infra/skills/ci-secret-scanning-gate/SKILL.md",
+      "platform": "automation",
+      "pillar": "ci-cd-infra",
+      "type": "skill",
+      "name": "ci-secret-scanning-gate",
+      "title": "ci-secret-scanning-gate",
+      "summary": "Monta una defensa en dos capas contra secretos filtrados — un hook pre-commit que bloquea antes de commitear y un paso de CI que audita el historial completo — con gitleaks. Usar al preparar un repo para hacerse público o al endurecer un pipeline.",
+      "tags": [
+        "ci-cd",
+        "security",
+        "gitleaks",
+        "secrets",
+        "pre-commit"
+      ]
+    },
+    {
+      "id": "automation/ci-cd-infra/snippet/github-actions-cache-concurrency",
+      "path": "automation/ci-cd-infra/snippets/github-actions-cache-concurrency/README.md",
+      "platform": "automation",
+      "pillar": "ci-cd-infra",
+      "type": "snippet",
+      "name": "github-actions-cache-concurrency",
+      "title": "Caché de dependencias y cancelación de corridas en GitHub Actions",
+      "summary": "Reduce el tiempo y el costo de CI cacheando dependencias con claves correctas y cancelando corridas obsoletas del mismo PR automáticamente.",
+      "tags": [
+        "github-actions",
+        "cache",
+        "ci",
+        "concurrency",
+        "performance"
+      ],
+      "whenNotToUse": "No cachear el resultado de un build que debe ser reproducible desde cero (release final) — ahí un caché corrupto es peor que la espera."
+    },
+    {
+      "id": "automation/ci-cd-infra/guide/pipeline-stages",
+      "path": "automation/ci-cd-infra/guides/pipeline-stages/README.md",
+      "platform": "automation",
+      "pillar": "ci-cd-infra",
+      "type": "guide",
+      "name": "pipeline-stages",
+      "title": "Qué va en cada etapa del pipeline",
+      "summary": "Criterio para ordenar las verificaciones de un pipeline según costo y probabilidad de fallo, de modo que el feedback llegue rápido y el CI no se vuelva un peaje.",
+      "tags": [
+        "ci-cd",
+        "pipeline",
+        "devops",
+        "decision",
+        "feedback-loop"
+      ]
+    },
+    {
+      "id": "automation/workflows-rpa/skill/idempotent-webhook-workflow",
+      "path": "automation/workflows-rpa/skills/idempotent-webhook-workflow/SKILL.md",
+      "platform": "automation",
+      "pillar": "workflows-rpa",
+      "type": "skill",
+      "name": "idempotent-webhook-workflow",
+      "title": "idempotent-webhook-workflow",
+      "summary": "Diseña un workflow de automatización disparado por webhook que tolera reintentos y entregas duplicadas sin ejecutar la acción dos veces, usando deduplicación por clave, respuesta inmediata y reintentos con backoff. Usar al construir integraciones en n8n, Activepieces o similares.",
+      "tags": [
+        "automation",
+        "webhooks",
+        "idempotency",
+        "n8n",
+        "reliability"
+      ]
+    },
+    {
+      "id": "automation/workflows-rpa/snippet/retry-with-backoff",
+      "path": "automation/workflows-rpa/snippets/retry-with-backoff/README.md",
+      "platform": "automation",
+      "pillar": "workflows-rpa",
+      "type": "snippet",
+      "name": "retry-with-backoff",
+      "title": "Reintento con backoff exponencial y jitter",
+      "summary": "Reintenta operaciones que fallan por causas transitorias con espera creciente y aleatorizada, distinguiendo errores recuperables de los que no lo son.",
+      "tags": [
+        "retry",
+        "backoff",
+        "jitter",
+        "resilience",
+        "api"
+      ],
+      "whenNotToUse": "No reintentar operaciones no idempotentes sin una clave de idempotencia — un reintento de \"cobrar\" puede cobrar dos veces."
+    },
+    {
+      "id": "automation/workflows-rpa/guide/when-to-automate",
+      "path": "automation/workflows-rpa/guides/when-to-automate/README.md",
+      "platform": "automation",
+      "pillar": "workflows-rpa",
+      "type": "guide",
+      "name": "when-to-automate",
+      "title": "Cuándo automatizar con no-code, con código, o no automatizar",
+      "summary": "Criterio para decidir si un proceso merece automatizarse y con qué herramienta, incluyendo el caso que casi nunca se considera: dejarlo manual.",
+      "tags": [
+        "automation",
+        "n8n",
+        "decision",
+        "roi",
+        "workflows"
+      ]
+    },
+    {
+      "id": "design/component-systems/skill/component-state-coverage",
+      "path": "design/component-systems/skills/component-state-coverage/SKILL.md",
+      "platform": "design",
+      "pillar": "component-systems",
+      "type": "skill",
+      "name": "component-state-coverage",
+      "title": "component-state-coverage",
+      "summary": "Enumera y documenta todos los estados que un componente de UI debe cubrir (default, hover, focus, active, disabled, loading, error, vacío) antes de darlo por terminado, usando Storybook como soporte. Usar al construir o revisar un componente de un design system.",
+      "tags": [
+        "design-system",
+        "components",
+        "storybook",
+        "states",
+        "a11y"
+      ]
+    },
+    {
+      "id": "design/component-systems/snippet/variant-props-with-cva",
+      "path": "design/component-systems/snippets/variant-props-with-cva/README.md",
+      "platform": "design",
+      "pillar": "component-systems",
+      "type": "snippet",
+      "name": "variant-props-with-cva",
+      "title": "Variantes tipadas de componente con CVA",
+      "summary": "Define variantes de un componente (intent, size, estado) como configuración declarativa con tipos derivados automáticamente, en vez de cadenas de condicionales de clases.",
+      "tags": [
+        "react",
+        "typescript",
+        "tailwind",
+        "variants",
+        "cva"
+      ],
+      "whenNotToUse": "Si el componente tiene una sola apariencia sin variantes, agregar CVA es indirección innecesaria."
+    },
+    {
+      "id": "design/component-systems/guide/build-adopt-or-copy",
+      "path": "design/component-systems/guides/build-adopt-or-copy/README.md",
+      "platform": "design",
+      "pillar": "component-systems",
+      "type": "guide",
+      "name": "build-adopt-or-copy",
+      "title": "Construir, adoptar o copiar — estrategia de librería de componentes",
+      "summary": "Criterio para elegir entre construir componentes propios, instalar una librería completa o copiar el código al proyecto, según cuánto control de diseño se necesita.",
+      "tags": [
+        "design-system",
+        "components",
+        "shadcn",
+        "mui",
+        "radix",
+        "decision"
+      ]
+    },
+    {
+      "id": "design/design-tokens/skill/tokens-to-platform-variables",
+      "path": "design/design-tokens/skills/tokens-to-platform-variables/SKILL.md",
+      "platform": "design",
+      "pillar": "design-tokens",
+      "type": "skill",
+      "name": "tokens-to-platform-variables",
+      "title": "tokens-to-platform-variables",
+      "summary": "Define design tokens en un único archivo fuente y los transforma automáticamente a variables CSS, Swift, Kotlin y JS con Style Dictionary, para que un cambio de color se propague a web y mobile sin edición manual. Usar al montar un design system que sirve a más de una plataforma.",
+      "tags": [
+        "design-tokens",
+        "style-dictionary",
+        "design-system",
+        "build",
+        "cross-platform"
+      ]
+    },
+    {
+      "id": "design/design-tokens/snippet/theme-switch-with-tokens",
+      "path": "design/design-tokens/snippets/theme-switch-with-tokens/README.md",
+      "platform": "design",
+      "pillar": "design-tokens",
+      "type": "snippet",
+      "name": "theme-switch-with-tokens",
+      "title": "Cambio de tema con tokens semánticos",
+      "summary": "Implementa modo claro/oscuro redefiniendo solo la capa semántica de tokens, respetando la preferencia del sistema y permitiendo override manual sin parpadeo al cargar.",
+      "tags": [
+        "css-variables",
+        "dark-mode",
+        "theming",
+        "tokens"
+      ],
+      "whenNotToUse": "Si el sitio solo tiene un tema, las variables CSS directas alcanzan — la capa semántica agrega indirección sin beneficio."
+    },
+    {
+      "id": "design/design-tokens/guide/when-tokens-are-worth-it",
+      "path": "design/design-tokens/guides/when-tokens-are-worth-it/README.md",
+      "platform": "design",
+      "pillar": "design-tokens",
+      "type": "guide",
+      "name": "when-tokens-are-worth-it",
+      "title": "Cuándo un sistema de tokens vale la pena",
+      "summary": "Criterio para decidir si montar un pipeline de design tokens o quedarse con variables CSS, y cómo estructurar las capas si la respuesta es que sí.",
+      "tags": [
+        "design-tokens",
+        "design-system",
+        "decision",
+        "roi"
+      ]
+    },
+    {
+      "id": "design/handoff/skill/design-to-code-spec",
+      "path": "design/handoff/skills/design-to-code-spec/SKILL.md",
+      "platform": "design",
+      "pillar": "handoff",
+      "type": "skill",
+      "name": "design-to-code-spec",
+      "title": "design-to-code-spec",
+      "summary": "Define qué información debe cruzar la frontera entre diseño y código para que un componente se implemente sin adivinar — comportamiento, estados, breakpoints, contenido variable y accesibilidad — más allá de medidas y colores. Usar al preparar o recibir un handoff.",
+      "tags": [
+        "handoff",
+        "design-system",
+        "documentation",
+        "collaboration",
+        "figma"
+      ]
+    },
+    {
+      "id": "design/handoff/snippet/svg-icon-sprite",
+      "path": "design/handoff/snippets/svg-icon-sprite/README.md",
+      "platform": "design",
+      "pillar": "handoff",
+      "type": "snippet",
+      "name": "svg-icon-sprite",
+      "title": "Sprite de iconos SVG desde la carpeta de diseño",
+      "summary": "Convierte una carpeta de SVG exportados por diseño en un sprite único optimizado, con validación de naming y de que los iconos usen currentColor.",
+      "tags": [
+        "svg",
+        "icons",
+        "build",
+        "sprite",
+        "assets"
+      ],
+      "whenNotToUse": "Si el proyecto usa una librería de iconos ya mantenida (Lucide, Heroicons), consumirla directamente — este snippet es para iconos propios de la marca."
+    },
+    {
+      "id": "design/handoff/guide/who-decides-what",
+      "path": "design/handoff/guides/who-decides-what/README.md",
+      "platform": "design",
+      "pillar": "handoff",
+      "type": "guide",
+      "name": "who-decides-what",
+      "title": "Quién decide qué — fronteras entre diseño y desarrollo",
+      "summary": "Reparto explícito de decisiones entre diseño y desarrollo, para evitar tanto las idas y vueltas como el retrabajo por asumir que el otro lo iba a resolver.",
+      "tags": [
+        "handoff",
+        "collaboration",
+        "process",
+        "decision",
+        "design-system"
+      ]
+    },
+    {
+      "id": "video/playback/skill/adaptive-streaming-player",
+      "path": "video/playback/skills/adaptive-streaming-player/SKILL.md",
+      "platform": "video",
+      "pillar": "playback",
+      "type": "skill",
+      "name": "adaptive-streaming-player",
+      "title": "adaptive-streaming-player",
+      "summary": "Reproduce streaming adaptativo HLS en cualquier navegador usando hls.js con fallback al soporte nativo de Safari, con controles accesibles y manejo de errores recuperables. Usar cuando hay que reproducir video de más de unos pocos minutos o con calidad variable según la conexión.",
+      "tags": [
+        "video",
+        "hls",
+        "streaming",
+        "playback",
+        "a11y"
+      ]
+    },
+    {
+      "id": "video/playback/snippet/lazy-video-with-poster",
+      "path": "video/playback/snippets/lazy-video-with-poster/README.md",
+      "platform": "video",
+      "pillar": "playback",
+      "type": "snippet",
+      "name": "lazy-video-with-poster",
+      "title": "Video diferido con poster e IntersectionObserver",
+      "summary": "Carga el video solo cuando entra en el viewport, muestra un poster liviano mientras tanto y pausa automáticamente al salir de pantalla.",
+      "tags": [
+        "video",
+        "lazy-loading",
+        "performance",
+        "intersection-observer",
+        "autoplay"
+      ],
+      "whenNotToUse": "No aplicar al video principal del hero — ahí conviene precargar para que empiece rápido, con preload=\"metadata\" y fetchpriority alto."
+    },
+    {
+      "id": "video/playback/guide/video-delivery-strategy",
+      "path": "video/playback/guides/video-delivery-strategy/README.md",
+      "platform": "video",
+      "pillar": "playback",
+      "type": "guide",
+      "name": "video-delivery-strategy",
+      "title": "Estrategia de entrega de video — formato, hosting y streaming",
+      "summary": "Criterio para decidir cómo servir video según duración, audiencia y presupuesto, desde un MP4 estático hasta streaming adaptativo con DRM.",
+      "tags": [
+        "video",
+        "streaming",
+        "hls",
+        "cdn",
+        "decision",
+        "performance"
+      ]
+    },
+    {
+      "id": "video/processing/skill/client-side-video-trim",
+      "path": "video/processing/skills/client-side-video-trim/SKILL.md",
+      "platform": "video",
+      "pillar": "processing",
+      "type": "skill",
+      "name": "client-side-video-trim",
+      "title": "client-side-video-trim",
+      "summary": "Recorta, convierte o extrae frames de un video en el navegador con ffmpeg.wasm, sin subir el archivo a un servidor, incluyendo carga diferida del binario WASM y reporte de progreso. Usar cuando el procesamiento debe ocurrir del lado del cliente por privacidad, costo o latencia.",
+      "tags": [
+        "video",
+        "ffmpeg",
+        "wasm",
+        "processing",
+        "privacy"
+      ]
+    },
+    {
+      "id": "video/processing/snippet/scrubbing-thumbnail-sprite",
+      "path": "video/processing/snippets/scrubbing-thumbnail-sprite/README.md",
+      "platform": "video",
+      "pillar": "processing",
+      "type": "snippet",
+      "name": "scrubbing-thumbnail-sprite",
+      "title": "Sprite de miniaturas para previsualizar el scrubbing",
+      "summary": "Genera con FFmpeg una hoja de miniaturas y su archivo WebVTT para mostrar una vista previa al arrastrar la barra de progreso, con una sola imagen en vez de cientos.",
+      "tags": [
+        "ffmpeg",
+        "video",
+        "thumbnails",
+        "webvtt",
+        "sprite",
+        "ux"
+      ],
+      "whenNotToUse": "Para videos de menos de un minuto no aporta — el usuario encuentra el punto que busca sin previsualización."
+    },
+    {
+      "id": "video/processing/guide/client-or-server-processing",
+      "path": "video/processing/guides/client-or-server-processing/README.md",
+      "platform": "video",
+      "pillar": "processing",
+      "type": "guide",
+      "name": "client-or-server-processing",
+      "title": "Procesar video en el cliente o en el servidor",
+      "summary": "Criterio para decidir dónde ocurre el procesamiento de video según tamaño de archivo, volumen de uso, privacidad y costo, con el punto de corte donde cada opción deja de servir.",
+      "tags": [
+        "ffmpeg",
+        "wasm",
+        "video",
+        "architecture",
+        "decision",
+        "privacy"
+      ]
+    },
+    {
+      "id": "video/production-marketing/skill/channel-export-presets",
+      "path": "video/production-marketing/skills/channel-export-presets/SKILL.md",
+      "platform": "video",
+      "pillar": "production-marketing",
+      "type": "skill",
+      "name": "channel-export-presets",
+      "title": "channel-export-presets",
+      "summary": "Exporta un master de video a los formatos exactos que exige cada canal (App Store, Google Play, TikTok/Reels, YouTube, web) con comandos FFmpeg reproducibles, en vez de re-exportar a mano desde el editor. Usar al preparar la entrega de un video para varios destinos.",
+      "tags": [
+        "video",
+        "ffmpeg",
+        "export",
+        "marketing",
+        "social-media"
+      ]
+    },
+    {
+      "id": "video/production-marketing/snippet/lottie-web-embed",
+      "path": "video/production-marketing/snippets/lottie-web-embed/README.md",
+      "platform": "video",
+      "pillar": "production-marketing",
+      "type": "snippet",
+      "name": "lottie-web-embed",
+      "title": "Animación Lottie en web con carga diferida",
+      "summary": "Incrusta una animación exportada de After Effects como JSON, cargando el player solo cuando la animación entra en pantalla y respetando la preferencia de movimiento reducido.",
+      "tags": [
+        "lottie",
+        "animation",
+        "after-effects",
+        "performance",
+        "motion"
+      ],
+      "whenNotToUse": "Para una animación simple de UI (un fade, un desplazamiento), CSS o Web Animations API pesan mucho menos que cargar un runtime de Lottie."
+    },
+    {
+      "id": "video/production-marketing/guide/choosing-motion-format",
+      "path": "video/production-marketing/guides/choosing-motion-format/README.md",
+      "platform": "video",
+      "pillar": "production-marketing",
+      "type": "guide",
+      "name": "choosing-motion-format",
+      "title": "Elegir formato de movimiento — CSS, Lottie, video o Rive",
+      "summary": "Criterio para elegir en qué formato entregar una pieza de movimiento según quién la produce, si necesita interactividad y cuánto peso tolera el proyecto.",
+      "tags": [
+        "lottie",
+        "video",
+        "animation",
+        "rive",
+        "decision",
+        "motion"
+      ]
+    }
+  ]
+}

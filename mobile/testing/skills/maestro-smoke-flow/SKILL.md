@@ -1,6 +1,7 @@
 ---
 name: maestro-smoke-flow
 description: Escribe un test E2E de humo para una app móvil en YAML con Maestro, cubriendo el camino crítico (login, acción principal, salida) con esperas implícitas y selectores estables. Usar cuando una app no tiene tests E2E y hace falta cobertura mínima rápido.
+tags: [mobile, testing, maestro, e2e, yaml]
 ---
 
 # Maestro Smoke Flow

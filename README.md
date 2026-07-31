@@ -98,10 +98,33 @@ artículos. Cuando un pilar no tiene un proyecto de referencia grande (pasa en
 `mobile/accessibility` y en `design/design-tokens`), el catálogo lo dice
 explícitamente en vez de rellenar con referencias débiles.
 
+## Para agentes de IA
+
+El índice legible por máquina está en **[`_meta/index.json`](_meta/index.json)**.
+Trae los 66 recursos con `path`, `platform`, `pillar`, `type`, `tags`,
+`summary` y `whenNotToUse`, más las convenciones del repo — sin necesidad de
+parsear tablas Markdown ni recorrer el árbol de directorios.
+
+```js
+const index = await fetch(
+  'https://raw.githubusercontent.com/Diego-20000/product-skills-lab/main/_meta/index.json'
+).then((r) => r.json());
+
+// Filtrar por tema, cruzando pilares
+index.resources.filter((r) => r.tags.includes('a11y'));
+
+// Solo lo accionable de una plataforma
+index.resources.filter((r) => r.platform === 'mobile' && r.type === 'skill');
+```
+
+Se regenera con `node scripts/build-index.mjs`, que además valida frontmatter,
+secciones obligatorias y links internos. Corre en CI en cada push.
+
 ## Documentación del repo
 
 | Archivo | Para qué |
 |---|---|
+| [`_meta/index.json`](_meta/index.json) | Índice legible por máquina de los 66 recursos |
 | [`_meta/TAXONOMY.md`](_meta/TAXONOMY.md) | Qué entra y qué no entra, por pilar |
 | [`_meta/TEMPLATE.md`](_meta/TEMPLATE.md) | Plantilla y nivel de detalle exigido para cada tipo |
 | [`_meta/SOURCES.md`](_meta/SOURCES.md) | Catálogo de los 256 repos de referencia |

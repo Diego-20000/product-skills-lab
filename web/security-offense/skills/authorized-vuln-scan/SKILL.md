@@ -1,6 +1,7 @@
 ---
 name: authorized-vuln-scan
 description: Monta un escaneo de vulnerabilidades reproducible contra una aplicación propia (o con autorización escrita) usando nuclei y OWASP ZAP, y traduce los hallazgos en trabajo priorizado. Usar para validar el hardening de un sistema propio antes de salir a producción.
+tags: [security, scanning, nuclei, zap, authorized-testing]
 ---
 
 # Authorized Vulnerability Scan

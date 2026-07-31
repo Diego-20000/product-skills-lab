@@ -1,6 +1,7 @@
 ---
 name: idempotent-webhook-workflow
 description: Diseña un workflow de automatización disparado por webhook que tolera reintentos y entregas duplicadas sin ejecutar la acción dos veces, usando deduplicación por clave, respuesta inmediata y reintentos con backoff. Usar al construir integraciones en n8n, Activepieces o similares.
+tags: [automation, webhooks, idempotency, n8n, reliability]
 ---
 
 # Idempotent Webhook Workflow

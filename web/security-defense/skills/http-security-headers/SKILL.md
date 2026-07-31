@@ -1,6 +1,7 @@
 ---
 name: http-security-headers
 description: Configura y explica los headers HTTP de seguridad esenciales (CSP, HSTS, X-Content-Type-Options, Referrer-Policy) en una app Express/Node, yendo más allá de instalar helmet con su configuración por defecto. Usar cuando piden "hardening" o "seguridad básica" de un backend web.
+tags: [security, csp, headers, helmet, express]
 ---
 
 # HTTP Security Headers

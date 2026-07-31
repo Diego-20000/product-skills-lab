@@ -1,6 +1,7 @@
 ---
 name: compose-list-performance
 description: Corrige listas de Jetpack Compose que se traban al scrollear, aplicando keys estables, estado elevado correctamente, lambdas diferidas y clases estables para evitar recomposiciones innecesarias. Usar cuando una LazyColumn se siente lenta o pierde frames.
+tags: [android, jetpack-compose, performance, recomposition, kotlin]
 ---
 
 # Compose List Performance

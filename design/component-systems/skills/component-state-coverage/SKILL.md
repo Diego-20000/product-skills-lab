@@ -1,6 +1,7 @@
 ---
 name: component-state-coverage
 description: Enumera y documenta todos los estados que un componente de UI debe cubrir (default, hover, focus, active, disabled, loading, error, vacío) antes de darlo por terminado, usando Storybook como soporte. Usar al construir o revisar un componente de un design system.
+tags: [design-system, components, storybook, states, a11y]
 ---
 
 # Component State Coverage

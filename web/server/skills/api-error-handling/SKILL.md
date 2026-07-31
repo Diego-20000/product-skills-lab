@@ -1,6 +1,7 @@
 ---
 name: api-error-handling
 description: Centraliza el manejo de errores de una API Node/Express en un solo middleware, con errores tipados, códigos HTTP correctos y respuestas de formato consistente que no filtran detalles internos. Usar cuando una API devuelve errores inconsistentes, stack traces al cliente o 500 para todo.
+tags: [nodejs, express, error-handling, api, middleware]
 ---
 
 # API Error Handling

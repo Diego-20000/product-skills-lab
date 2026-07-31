@@ -1,6 +1,7 @@
 ---
 name: testing-by-accessible-role
 description: Escribe tests de componentes seleccionando elementos por rol accesible y texto visible en vez de por clase CSS, test-id o estado interno, de modo que el test falle solo cuando se rompe algo que el usuario percibe. Usar al escribir o refactorizar tests de UI frágiles.
+tags: [testing, testing-library, a11y, selectors, playwright]
 ---
 
 # Testing by Accessible Role

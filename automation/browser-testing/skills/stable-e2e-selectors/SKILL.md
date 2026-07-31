@@ -1,6 +1,7 @@
 ---
 name: stable-e2e-selectors
 description: Elimina tests E2E intermitentes reemplazando esperas fijas por condiciones reales y selectores frágiles por selectores semánticos, con Playwright como referencia. Usar cuando una suite E2E falla de forma aleatoria y el equipo empezó a reintentarla en vez de confiar en ella.
+tags: [testing, playwright, e2e, flakiness, selectors]
 ---
 
 # Stable E2E Selectors
