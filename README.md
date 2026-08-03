@@ -10,8 +10,8 @@ de leer un archivo Markdown con frontmatter — no es específico de Claude,
 aunque los `skills/` siguen el formato de [Claude Code Skills](https://docs.claude.com/claude-code/skills)
 por ser el más portable y auto-descriptivo disponible hoy.
 
-**66 recursos** repartidos en **22 pilares** y **5 plataformas**, escritos de
-cero a partir del estudio de **256 repositorios de referencia** con sus
+**69 recursos** repartidos en **23 pilares** y **5 plataformas**, escritos de
+cero a partir del estudio de **264 repositorios de referencia** con sus
 estrellas verificadas contra GitHub.
 
 ## Cómo está organizado
@@ -43,6 +43,7 @@ marketing sirven igual para un sitio web que para una app.
 | `security-offense` | [authorized-vuln-scan](web/security-offense/skills/authorized-vuln-scan/SKILL.md) | [custom-nuclei-template](web/security-offense/snippets/custom-nuclei-template/README.md) | [scan-pentest-or-audit](web/security-offense/guides/scan-pentest-or-audit/README.md) |
 | `server` | [api-error-handling](web/server/skills/api-error-handling/SKILL.md) | [rate-limit-express](web/server/snippets/rate-limit-express/README.md) | [choosing-node-framework](web/server/guides/choosing-node-framework/README.md) |
 | `search` | [client-side-site-search](web/search/skills/client-side-site-search/SKILL.md) | [highlight-search-matches](web/search/snippets/highlight-search-matches/README.md) | [choosing-search-engine](web/search/guides/choosing-search-engine/README.md) |
+| `integrations` | [resilient-api-client](web/integrations/skills/resilient-api-client/SKILL.md) | [api-key-proxy-route](web/integrations/snippets/api-key-proxy-route/README.md) | [evaluating-an-api-provider](web/integrations/guides/evaluating-an-api-provider/README.md) |
 | `testing` | [testing-by-accessible-role](web/testing/skills/testing-by-accessible-role/SKILL.md) | [custom-render-with-providers](web/testing/snippets/custom-render-with-providers/README.md) | [what-to-test-at-each-level](web/testing/guides/what-to-test-at-each-level/README.md) |
 | `accessibility` | [accessible-modal-dialog](web/accessibility/skills/accessible-modal-dialog/SKILL.md) | [skip-link-and-visually-hidden](web/accessibility/snippets/skip-link-and-visually-hidden/README.md) | [accessibility-priorities](web/accessibility/guides/accessibility-priorities/README.md) |
 
@@ -101,7 +102,7 @@ explícitamente en vez de rellenar con referencias débiles.
 ## Para agentes de IA
 
 El índice legible por máquina está en **[`_meta/index.json`](_meta/index.json)**.
-Trae los 66 recursos con `path`, `platform`, `pillar`, `type`, `tags`,
+Trae los 69 recursos con `path`, `platform`, `pillar`, `type`, `tags`,
 `summary` y `whenNotToUse`, más las convenciones del repo — sin necesidad de
 parsear tablas Markdown ni recorrer el árbol de directorios.
 
@@ -124,10 +125,10 @@ secciones obligatorias y links internos. Corre en CI en cada push.
 
 | Archivo | Para qué |
 |---|---|
-| [`_meta/index.json`](_meta/index.json) | Índice legible por máquina de los 66 recursos |
+| [`_meta/index.json`](_meta/index.json) | Índice legible por máquina de los 69 recursos |
 | [`_meta/TAXONOMY.md`](_meta/TAXONOMY.md) | Qué entra y qué no entra, por pilar |
 | [`_meta/TEMPLATE.md`](_meta/TEMPLATE.md) | Plantilla y nivel de detalle exigido para cada tipo |
-| [`_meta/SOURCES.md`](_meta/SOURCES.md) | Catálogo de los 256 repos de referencia |
+| [`_meta/SOURCES.md`](_meta/SOURCES.md) | Catálogo de los 264 repos de referencia |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Cómo agregar un recurso nuevo |
 
 ## Licencia

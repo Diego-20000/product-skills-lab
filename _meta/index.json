@@ -4,7 +4,7 @@
   "description": "Skills, snippets y guías reutilizables para construir productos digitales: web, mobile, automatización, diseño y video.",
   "repository": "https://github.com/Diego-20000/product-skills-lab",
   "license": "MIT",
-  "generatedAt": "2026-07-31",
+  "generatedAt": "2026-08-03",
   "conventions": {
     "layout": "<platform>/<pillar>/<type>/<name>/",
     "types": {
@@ -16,12 +16,12 @@
   },
   "counts": {
     "platforms": 5,
-    "pillars": 22,
-    "resources": 66,
+    "pillars": 23,
+    "resources": 69,
     "byType": {
-      "skill": 22,
-      "snippet": 22,
-      "guide": 22
+      "skill": 23,
+      "snippet": 23,
+      "guide": 23
     }
   },
   "resources": [
@@ -127,6 +127,61 @@
         "gsap",
         "decision",
         "performance"
+      ]
+    },
+    {
+      "id": "web/integrations/skill/resilient-api-client",
+      "path": "web/integrations/skills/resilient-api-client/SKILL.md",
+      "platform": "web",
+      "pillar": "integrations",
+      "type": "skill",
+      "name": "resilient-api-client",
+      "title": "resilient-api-client",
+      "summary": "Construye un cliente para una API de terceros que no tumbe tu app cuando el proveedor falla — con timeout, reintentos acotados, circuit breaker, caché y degradación explícita. Usar al integrar cualquier servicio externo cuyo downtime no controlás.",
+      "tags": [
+        "api",
+        "integration",
+        "resilience",
+        "circuit-breaker",
+        "timeout",
+        "caching"
+      ]
+    },
+    {
+      "id": "web/integrations/snippet/api-key-proxy-route",
+      "path": "web/integrations/snippets/api-key-proxy-route/README.md",
+      "platform": "web",
+      "pillar": "integrations",
+      "type": "snippet",
+      "name": "api-key-proxy-route",
+      "title": "Proxy de API con clave del lado servidor",
+      "summary": "Ruta de backend que llama a una API de terceros guardando la clave del lado servidor, con caché compartido y allowlist de endpoints, para que el frontend nunca la vea.",
+      "tags": [
+        "api",
+        "proxy",
+        "api-key",
+        "security",
+        "caching",
+        "express"
+      ],
+      "whenNotToUse": "Si la API de terceros está diseñada para el navegador con claves públicas restringidas por dominio (Google Maps, Stripe.js), usar ese mecanismo — el proxy agrega latencia sin beneficio."
+    },
+    {
+      "id": "web/integrations/guide/evaluating-an-api-provider",
+      "path": "web/integrations/guides/evaluating-an-api-provider/README.md",
+      "platform": "web",
+      "pillar": "integrations",
+      "type": "guide",
+      "name": "evaluating-an-api-provider",
+      "title": "Evaluar un proveedor de API antes de depender de él",
+      "summary": "Criterio para decidir si integrar un servicio externo y cuál elegir, evaluando el costo real de la dependencia más allá del precio de lista.",
+      "tags": [
+        "api",
+        "integration",
+        "vendor",
+        "decision",
+        "risk",
+        "build-vs-buy"
       ]
     },
     {

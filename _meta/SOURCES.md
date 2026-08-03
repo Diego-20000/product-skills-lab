@@ -265,6 +265,72 @@ arquitectura de backend Node.
 
 ---
 
+## `web/integrations`
+
+**[public-apis](https://github.com/public-apis/public-apis)** — 454.2k ⭐ ✅
+Directorio comunitario de APIs públicas gratuitas en más de 40 categorías,
+mantenido con apoyo de APILayer. Es **el repo con más estrellas de todo el
+catálogo** y uno de los más estrellados de GitHub. Su valor acá es de
+descubrimiento: sirve para encontrar y comparar candidatos por categoría
+antes de integrar. Importante para la taxonomía de este repo: es una
+"awesome-list", así que se referencia como fuente y **no** se reproduce como
+contenido — que una API esté listada no dice nada sobre su fiabilidad,
+precio real ni política de datos, que es justamente lo que aporta la guía
+del pilar.
+
+**[apilayer](https://github.com/apilayer)** (organización) — repos de 60 a
+2.3k ⭐ ✅
+Marketplace de APIs de nicho: currencylayer (tipos de cambio),
+weatherstack (clima), aviationstack (vuelos), marketstack (bolsa),
+numverify (teléfonos), mailboxlayer (validación de email). Los repos de la
+organización son mayormente documentación de producto, no librerías — el
+mayor es [restcountries](https://github.com/apilayer/restcountries) (2.3k ⭐).
+Relevantes como **caso de estudio del patrón que hay que evitar**: su
+documentación muestra la llamada directa desde el navegador con la
+`access_key` en la query string, que es exactamente lo que expone la clave
+en el bundle y motiva el snippet de proxy de este pilar.
+
+**[axios](https://github.com/axios/axios)** — 109k ⭐ ✅
+El cliente HTTP más adoptado del ecosistema JS. Su sistema de interceptores
+es el patrón estándar para inyectar autenticación y manejar errores de forma
+transversal, aunque deja timeout, reintentos y circuit breaking al
+implementador.
+
+**[TanStack Query](https://github.com/TanStack/query)** — 50.1k ⭐ ✅
+Trata la respuesta de una API como **estado asíncrono** en vez de como una
+llamada suelta: caché, revalidación en background, deduplicación de requests
+concurrentes y reintentos vienen resueltos. Cambia el modelo mental del
+consumo de APIs en el frontend, y para React suele ser la respuesta correcta
+antes que escribir un cliente propio.
+
+**[OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator)** —
+26.6k ⭐ ✅
+Genera clientes tipados (SDKs), stubs de servidor y documentación a partir de
+una especificación OpenAPI, para 30+ lenguajes. Su existencia es el motivo
+práctico por el que "¿el proveedor publica OpenAPI?" es un criterio de
+evaluación real: cambia cuánto trabajo cuesta integrar y detectar un cambio
+de contrato.
+
+**[MSW](https://github.com/mswjs/msw)** — 18.1k ⭐ ✅
+Intercepta requests a nivel de red (Service Worker en el navegador,
+interceptación de bajo nivel en Node) en vez de mockear el módulo de fetch.
+Permite testear una integración sin depender de la disponibilidad del
+proveedor ni consumir cuota, y sin que el código bajo test sepa que está
+mockeado.
+
+**[got](https://github.com/sindresorhus/got)** — 14.9k ⭐ ✅
+Cliente HTTP para Node con reintentos, timeouts granulares por fase de la
+conexión, paginación, HTTP/2 y caché conforme a RFC 7234 incorporados. Es la
+vara de qué debería traer un cliente maduro, y la razón para no construir
+esa capa a mano cuando se puede sumar la dependencia.
+
+**[http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware)**
+— 11.1k ⭐ ✅
+Middleware de proxy genérico para Express y Next.js. Alternativa cuando hay
+que proxear muchas rutas; el trade-off frente a un proxy explícito por
+endpoint es que sin allowlist se corre el riesgo de convertirlo en un proxy
+abierto.
+
 ## `web/search`
 
 ### Referencias principales
