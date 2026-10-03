@@ -1,6 +1,6 @@
 # product-skills-lab
 
-Colección organizada de **skills**, **snippets** y **guías** reutilizables para
+Patrones, **skills**, **snippets** y **guías** reutilizables para
 construir productos digitales completos: sitios y apps web, apps móviles
 (iOS/Android), sistemas de automatización, diseño de producto (UI/UX) y
 producción de video.
@@ -11,7 +11,7 @@ aunque los `skills/` siguen el formato de [Claude Code Skills](https://docs.clau
 por ser el más portable y auto-descriptivo disponible hoy.
 
 **69 recursos** repartidos en **23 pilares** y **5 plataformas**, escritos de
-cero a partir del estudio de **264 repositorios de referencia** con sus
+cero a partir del estudio de **varios repositorios de referencia** con sus
 estrellas verificadas contra GitHub.
 
 ## Cómo está organizado
