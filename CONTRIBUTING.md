@@ -3,7 +3,7 @@
 1. **Verificá el criterio** en [`_meta/TAXONOMY.md`](_meta/TAXONOMY.md): el
    recurso tiene que ser reutilizable, accionable y pertenecer a una de las
    cinco plataformas (`web`, `mobile`, `automation`, `design`, `video`) y a
-   uno de sus 22 pilares.
+   uno de sus 23 pilares.
 2. **Elegí la carpeta correcta**: `<plataforma>/<pilar>/<tipo>/<nombre-kebab-case>/`.
 3. **Usá la plantilla correspondiente** en [`_meta/TEMPLATE.md`](_meta/TEMPLATE.md)
    según sea `skill`, `snippet` o `guide`. La vara de detalle está definida
